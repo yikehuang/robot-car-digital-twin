@@ -1,0 +1,16 @@
+{
+  "archive_name": "DigitalTwin_OfflineEvaluation.zip",
+  "archive_sha256": "90db7ea66579819dad8fc174ca63d82125e01ee2ba3f94add7ad93b30c5f9a55",
+  "provided_date": "2026-11-12",
+  "readme_credit": "Yanxin Luo (as stated in the supplied handoff)",
+  "original_files": {
+    "README.md": "52dd935a3c24372bdddd3638a017acf289f2710d9ce3cea4ebd285f9ee7a2316",
+    "SquareReplayEvaluation.java": "eac9f0592bde3a739053e7ba47e030c1d5180e07eb6788b6348aff419ff4651f"
+  },
+  "integration_changes": [
+    "Retain original files without modification.",
+    "Preserve three-argument legacy CLI via LegacySquareReplayEvaluation.",
+    "Add portable runner, regression tests and bilingual documentation."
+  ],
+  "scope": "Offline file evaluation only; firmware and desktop motion model unchanged."
+}

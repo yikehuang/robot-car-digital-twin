@@ -1,0 +1,6 @@
+run,trial,robot_stop_reason,robot_stop_ms,position_rmse_mm,position_gap_at_robot_stop_mm,twin_stop_reason,twin_stop_ms,completion_time_delta_ms,completion_endpoint_gap_mm,completion_heading_delta_deg
+1,1,complete,9846,24.3476,10.4420,complete,9490,-356,10.4420,-2.1254
+2,2,left_stalled,10202,32.9502,26.5235,complete,9490,,,
+3,3,left_stalled,1946,102.0668,144.1881,complete,9490,,,
+4,4,complete,9992,26.9699,9.3366,complete,9490,-502,9.3366,-5.1666
+5,5,complete,10030,31.3495,10.6149,complete,9490,-540,10.6149,-4.3923

@@ -74,6 +74,20 @@ The prebuilt Java classes require **Java 17 or later** and the Processing librar
 
 **Wheel odometry is not independent physical ground truth.** Slip or incorrect rolling geometry can make the estimate wrong even when the plotted paths agree. Validate physical motion using measured references and fixed overhead video; see [PHYSICAL_VALIDATION.md](PHYSICAL_VALIDATION.md).
 
+## 离线评估改进 / Improved offline evaluation
+
+新工具可分别记录**小车停车时的同时间差距**与**模型独立完成后的时间、终点和航向差距**，便于区分阶段进度差异和各自完成时的偏差。用户提供的原始改进包保存在 `contributions/DigitalTwin_OfflineEvaluation/`，原交接说明署名 Yanxin Luo。使用方法与指标定义见[中英双语离线评估说明](docs/OFFLINE_EVALUATION.md)。
+
+The new tool separates the **same-time gap at robot stopping** from **time, endpoint and heading differences at respective completion**, helping distinguish route-phase mismatch from completion discrepancies. The supplied contribution is preserved in `contributions/DigitalTwin_OfflineEvaluation/`; its handoff credits Yanxin Luo. See the [bilingual offline evaluation guide](docs/OFFLINE_EVALUATION.md) for usage and metric definitions.
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Evaluate-Offline.ps1 -Telemetry .\knowledge-base\square-corner-fix-20261112\source_square_v2.csv
+```
+
+该示例使用历史 V2 数据运行当前 V3 模型，仅检查文件评估流程；不能当成 V3 实机预测精度的验证。新工具只读文件，不连接小车；旧的三参数回放接口仍保留。
+
+This example evaluates historical V2 data with the current V3 model as a pipeline check, not validation of V3 physical prediction accuracy. The tool reads files without connecting to hardware, and the old three-argument replay interface remains available.
+
 ## 已完成的验证与限制 / Validation status and limitations
 
 发送者已验证固件与完整桌面程序编译、固件烧录、待机数据接收、认证后的非启动 TCP 检查，以及软件测试。分享版还验证了共享配置固件编译、完整桌面编译、离线窗口启动、未配对时阻止 Live 启动，以及解压到含中文和空格的路径后启动。详见 [PACKAGE_VALIDATION.json](PACKAGE_VALIDATION.json)。

@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-12",
+  "source_archive_sha256": "90db7ea66579819dad8fc174ca63d82125e01ee2ba3f94add7ad93b30c5f9a55",
+  "original_two_argument_output_match": true,
+  "compiled_against": "Packaged V3 DigitalTwin_LPath classes",
+  "data_controller": "V2",
+  "model_controller": "V3",
+  "role": "pipeline_compatibility_only",
+  "physical_v3_validation": false,
+  "reference_data_sha256": "3f0ef5fe085faba0c073b56023260b0e5465fa304edb812e64ae273fc4246c07",
+  "reference_runs": 5,
+  "reference_completed": 3,
+  "reference_failed": 2,
+  "tests_passed": [
+    "robot_stops_first",
+    "model_stops_first",
+    "first_failure_reason_and_blank_completion_fields",
+    "missing_idle_start",
+    "missing_terminal_record",
+    "wrong_turn_direction",
+    "reboot_trial_reuse",
+    "three_argument_legacy_compatibility"
+  ],
+  "production_firmware_and_desktop_motion_files_changed": false,
+  "hardware_commands_sent": 0,
+  "limits": [
+    "Position references are wheel odometry, not external ground truth.",
+    "Historical V2-data/V3-model results check the evaluator, not matched-controller prediction accuracy.",
+    "RMSE weights telemetry rows, including duplicate timestamps.",
+    "Only matching successful robot/model completions have completion-comparison fields."
+  ]
+}
