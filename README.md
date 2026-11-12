@@ -88,6 +88,19 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Evaluate-Offline.ps1
 
 This example evaluates historical V2 data with the current V3 model as a pipeline check, not validation of V3 physical prediction accuracy. The tool reads files without connecting to hardware, and the old three-argument replay interface remains available.
 
+## 黑白地图与传感器定位方案 / Reflectance landmark-map proposal
+
+计划用已知位置的黑白地标，将底部反射传感器实验接入正方形路径和数字孪生：先记录标记事件，再验证是否能改善位置估计。**目前只有打印地图和实验方案，V3固件尚未实现标记识别或位置修正。**
+
+The proposal links reflectance-sensor experiments to the square-path digital twin using known black/white landmarks: log events first, then test whether they improve position estimation. **Printable maps and an experiment plan are available; V3 firmware does not yet implement marker detection or position correction.**
+
+- **有A3打印机：一张A3横向，420 × 297 mm。 / A3 printer: one landscape A3 sheet.** [打印A3地图 / Print A3 map](maps/landmark_map_v1/Square_Landmarks_A3_100percent.pdf)
+- **只有A4打印机：四张A4横向拼接。 / A4 printer: four landscape A4 tiles.** [打印A4拼接版 / Print A4 tiles](maps/landmark_map_v1/Square_Landmarks_A4_4tiles_100percent.pdf)
+
+选择**实际大小 / Actual size / 100%**，不要缩放；打印后量右侧100 mm刻度。正方形边长200 mm。 / Print at **Actual size / 100%**, without scaling, then measure the 100 mm scale. Square sides are 200 mm.
+
+[中英双语方案、摆放与打印说明 / Bilingual proposal, setup and printing guide](maps/landmark_map_v1/README.md)
+
 ## 已完成的验证与限制 / Validation status and limitations
 
 发送者已验证固件与完整桌面程序编译、固件烧录、待机数据接收、认证后的非启动 TCP 检查，以及软件测试。分享版还验证了共享配置固件编译、完整桌面编译、离线窗口启动、未配对时阻止 Live 启动，以及解压到含中文和空格的路径后启动。详见 [PACKAGE_VALIDATION.json](PACKAGE_VALIDATION.json)。

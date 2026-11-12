@@ -1,0 +1,92 @@
+{
+  "paper_mm": [
+    420,
+    297
+  ],
+  "route_paper_top_left_mm": [
+    [
+      110,
+      48.5
+    ],
+    [
+      310,
+      48.5
+    ],
+    [
+      310,
+      248.5
+    ],
+    [
+      110,
+      248.5
+    ],
+    [
+      110,
+      48.5
+    ]
+  ],
+  "markers": [
+    {
+      "id": "M1",
+      "bars": 1,
+      "paper_center_mm": [
+        210,
+        48.5
+      ],
+      "direction": "E",
+      "world_center_mm": [
+        100,
+        0.0
+      ]
+    },
+    {
+      "id": "M2",
+      "bars": 2,
+      "paper_center_mm": [
+        310,
+        148.5
+      ],
+      "direction": "S",
+      "world_center_mm": [
+        200,
+        -100.0
+      ]
+    },
+    {
+      "id": "M3",
+      "bars": 3,
+      "paper_center_mm": [
+        210,
+        248.5
+      ],
+      "direction": "W",
+      "world_center_mm": [
+        100,
+        -200.0
+      ]
+    },
+    {
+      "id": "M4",
+      "bars": 4,
+      "paper_center_mm": [
+        110,
+        148.5
+      ],
+      "direction": "N",
+      "world_center_mm": [
+        0,
+        -100.0
+      ]
+    }
+  ],
+  "bar_width_mm": 8,
+  "white_gap_mm": 8,
+  "prototype": true,
+  "world_frame": {
+    "origin": "start axle midpoint",
+    "x_positive": "right/east",
+    "y_positive": "up/north",
+    "paper_to_world": "x = paper_x - 110; y = 48.5 - paper_y"
+  },
+  "implementation_status": "Printable prototype; current V3 firmware does not read or decode these markers."
+}

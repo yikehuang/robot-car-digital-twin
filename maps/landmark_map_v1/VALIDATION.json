@@ -1,0 +1,30 @@
+{
+  "status": "printable_prototype_not_hardware_validated",
+  "a3": {
+    "pages": 1,
+    "width_mm": 420,
+    "height_mm": 297,
+    "orientation": "landscape"
+  },
+  "a4": {
+    "pages": 4,
+    "width_mm": 297,
+    "height_mm": 210,
+    "orientation": "landscape",
+    "overlap_mm": 20
+  },
+  "print_scale_percent": 100,
+  "square_side_mm": 200,
+  "black_bar_count": 10,
+  "black_bar_width_mm": 8,
+  "black_bar_transverse_length_mm": 80,
+  "geometry_checked_from_pdf_vectors": true,
+  "rendered_preview_inspected": true,
+  "physical_print_scale_verified": false,
+  "reflectance_detection_implemented": false,
+  "localization_accuracy_verified": false,
+  "pdf_sha256": {
+    "Square_Landmarks_A3_100percent.pdf": "dd36b9a55460a9ff2dfd38767a9971122bdeb66fb8394d70428a8f46e75d6bfc",
+    "Square_Landmarks_A4_4tiles_100percent.pdf": "8bdd58a2cf4e4e395037a59ccbce3ac19c2b0edab68749d672a63f7d041aeb81"
+  }
+}
