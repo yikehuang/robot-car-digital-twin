@@ -9,7 +9,7 @@ import processing.core.PImage;
 
 /** Offline comparison of square benchmark telemetry with an independent twin.
  * Adapted from the supplied DigitalTwin_OfflineEvaluation handoff (credits Yanxin Luo).
- * The unmodified contribution and SHA-256 provenance are in contributions/.
+ * The original handoff and SHA-256 provenance are in acknowledgements/.
  */
 public class SquareReplayEvaluation {
   private static final int STEP_MS = 10;

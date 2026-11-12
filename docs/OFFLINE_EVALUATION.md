@@ -1,8 +1,8 @@
 # 离线评估 / Offline evaluation
 
-本工具合并自用户提供的 `DigitalTwin_OfflineEvaluation.zip`；原交接说明署名 Yanxin Luo。原文件及校验值保存在 [contributions/DigitalTwin_OfflineEvaluation](../contributions/DigitalTwin_OfflineEvaluation/)。它读取 CSV，使用当前模型独立运行，不连接或控制小车。
+本工具合并自用户提供的 `DigitalTwin_OfflineEvaluation.zip`；原交接说明署名 Yanxin Luo。原文件及校验值保存在 [acknowledgements/DigitalTwin_OfflineEvaluation](../acknowledgements/DigitalTwin_OfflineEvaluation/)。它读取 CSV，使用当前模型独立运行，不连接或控制小车。
 
-This tool integrates the supplied `DigitalTwin_OfflineEvaluation.zip`; its handoff credits Yanxin Luo. The original files and hashes are preserved in [contributions/DigitalTwin_OfflineEvaluation](../contributions/DigitalTwin_OfflineEvaluation/). It reads CSV and runs the current model independently, without connecting to or commanding hardware.
+This tool integrates the supplied `DigitalTwin_OfflineEvaluation.zip`; its handoff credits Yanxin Luo. The original files and hashes are preserved in [acknowledgements/DigitalTwin_OfflineEvaluation](../acknowledgements/DigitalTwin_OfflineEvaluation/). It reads CSV and runs the current model independently, without connecting to or commanding hardware.
 
 ## 运行 / Run
 

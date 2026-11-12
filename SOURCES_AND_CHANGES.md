@@ -1,6 +1,6 @@
 # Sources and share-package changes
 
-Course source context: University of Bristol Robotics Science & Systems, https://semtm0043-42.github.io/index.html . The working project includes course robot interfaces and a teammate-supplied StampC3 SquareBenchmark, followed by local integration and model/control revisions. The package is a snapshot of Zeqi Dong's working V3 integration; provenance is not a claim that every supplied interface was written by one group member.
+Course source context: University of Bristol Robotics Science & Systems, https://semtm0043-42.github.io/index.html . The working project includes course robot interfaces and the initial StampC3_SquareBenchmark shared by miaoyuwang, followed by local integration and model/control revisions. The package is a snapshot of Zeqi Dong's working V3 integration; provenance is not a claim that every supplied interface was written by one group member.
 
 The original course checkout's GPL-3.0 license is preserved at course-materials/RoboticsScienceAndSystems/LICENSE. Original interface source comments are retained. Third-party Processing/Java/ESP32 runtimes are not redistributed here.
 
@@ -14,10 +14,16 @@ Share edition changes (only inside this package):
 
 V3 motion controller, wheel feedback, fitted plant, parser and stop protections are unchanged from the sender snapshot. PACKAGE_VALIDATION.json records exact checks and hashes. No physical route was run when building this archive.
 
-## Offline evaluation contribution — 12 November 2026
+## Offline evaluation handoff — 12 November 2026
 
-The user supplied DigitalTwin_OfflineEvaluation.zip and explicitly requested integration into this repository. Its README credits Yanxin Luo. Original README and Java source are retained without changes in contributions/DigitalTwin_OfflineEvaluation/, alongside archive/file SHA-256 provenance.
+The user supplied DigitalTwin_OfflineEvaluation.zip and explicitly requested integration into this repository. Its README credits Yanxin Luo. Original README and Java source are retained without changes in acknowledgements/DigitalTwin_OfflineEvaluation/, alongside archive/file SHA-256 provenance.
 
-Integration retains the contributed two-argument evaluation behaviour, adds a portable PowerShell runner and eight behavioral regression checks, and dispatches existing three-argument calls to LegacySquareReplayEvaluation. The latter preserves the original repository evaluator under a distinct class name. Bilingual usage and limitations are documented in docs/OFFLINE_EVALUATION.md.
+Integration retains the supplied two-argument evaluation behaviour, adds a portable PowerShell runner and eight behavioral regression checks, and dispatches existing three-argument calls to LegacySquareReplayEvaluation. The latter preserves the original repository evaluator under a distinct class name. Bilingual usage and limitations are documented in docs/OFFLINE_EVALUATION.md.
 
-This contribution changes offline file evaluation only. It does not change the robot firmware, fitted motion model or live comparison stopping rules. The historical V2 data is a pipeline reference and does not validate V3 physical motion.
+This update changes offline file evaluation only. It does not change the robot firmware, fitted motion model or live comparison stopping rules. The historical V2 data is a pipeline reference and does not validate V3 physical motion.
+
+## 致谢 / Acknowledgements
+
+感谢 Yanxin Luo 分享离线评估脚本与说明，感谢 miaoyuwang 分享最初的 StampC3_SquareBenchmark 工程。更多感谢与相关资料见 [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md)。
+
+Thank you to Yanxin Luo for the offline evaluator and guidance, and to miaoyuwang for sharing the initial StampC3_SquareBenchmark project. See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) for further thanks and related material.

@@ -4,7 +4,7 @@
 
 An encoder-controlled robot car and an independent Processing digital twin for a **clockwise square with 200 mm sides**, developed for group work in University of Bristol Robotics Science & Systems (SEMTM0043/SEMTM42).
 
-[中文详细说明 / Chinese setup guide](README_先看这里.md) · [英文技术概述 / English overview](OVERVIEW_EN.md) · [组员贡献 / Contributions](CONTRIBUTIONS.md) · [环境依赖 / Dependencies](DEPENDENCIES.md) · [实机验证方法 / Physical validation](PHYSICAL_VALIDATION.md)
+[中文详细说明 / Chinese setup guide](README_先看这里.md) · [英文技术概述 / English overview](OVERVIEW_EN.md) · [致谢 / Acknowledgements](ACKNOWLEDGEMENTS.md) · [环境依赖 / Dependencies](DEPENDENCIES.md) · [实机验证方法 / Physical validation](PHYSICAL_VALIDATION.md)
 
 ![离线模型演示，不是实机测量轨迹 / Offline model demonstration, not a measured physical trajectory](screenshots/offline_model_demo.png)
 
@@ -76,9 +76,9 @@ The prebuilt Java classes require **Java 17 or later** and the Processing librar
 
 ## 离线评估改进 / Improved offline evaluation
 
-新工具可分别记录**小车停车时的同时间差距**与**模型独立完成后的时间、终点和航向差距**，便于区分阶段进度差异和各自完成时的偏差。用户提供的原始改进包保存在 `contributions/DigitalTwin_OfflineEvaluation/`，原交接说明署名 Yanxin Luo。使用方法与指标定义见[中英双语离线评估说明](docs/OFFLINE_EVALUATION.md)。
+新工具可分别记录**小车停车时的同时间差距**与**模型独立完成后的时间、终点和航向差距**，便于区分阶段进度差异和各自完成时的偏差。用户提供的原始改进包保存在 `acknowledgements/DigitalTwin_OfflineEvaluation/`，原交接说明署名 Yanxin Luo。使用方法与指标定义见[中英双语离线评估说明](docs/OFFLINE_EVALUATION.md)。
 
-The new tool separates the **same-time gap at robot stopping** from **time, endpoint and heading differences at respective completion**, helping distinguish route-phase mismatch from completion discrepancies. The supplied contribution is preserved in `contributions/DigitalTwin_OfflineEvaluation/`; its handoff credits Yanxin Luo. See the [bilingual offline evaluation guide](docs/OFFLINE_EVALUATION.md) for usage and metric definitions.
+The new tool separates the **same-time gap at robot stopping** from **time, endpoint and heading differences at respective completion**, helping distinguish route-phase mismatch from completion discrepancies. The original handoff is preserved in `acknowledgements/DigitalTwin_OfflineEvaluation/`; its handoff credits Yanxin Luo. See the [bilingual offline evaluation guide](docs/OFFLINE_EVALUATION.md) for usage and metric definitions.
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\Evaluate-Offline.ps1 -Telemetry .\knowledge-base\square-corner-fix-20261112\source_square_v2.csv
@@ -99,15 +99,19 @@ The sender verified firmware/whole-sketch compilation, upload, idle telemetry, a
 Historical V2 fitting used trials 1 and 4 and excluded trial 5 from parameter fitting. Trial 5's position RMSE relative to wheel odometry decreased from **58.06 to 9.15 mm**, while stopping-frame endpoint discrepancy did not improve. Trial 5 was inspected during diagnosis, so this was not blind validation. These results measure historical model-versus-odometry agreement; **physical V3 accuracy still requires new independent distance/heading measurements**.
 
 
-## 组员贡献 / Team contributions
+## 致谢 / Acknowledgements
 
-**Yanxin Luo — 数字孪生离线评估改进。** 提供修改后的评估脚本与交接说明，将“小车停车时的同时间差距”与“模型独立完成后的时间、终点及航向差距”分别记录，并处理模型提前结束、失败和不完整记录。
+感谢 **Yanxin Luo** 分享数字孪生离线评估脚本与说明，帮助我们更清楚地比较小车与模型的运行时间、终点和方向差异。
 
-**Yanxin Luo — improved offline digital-twin evaluation.** Supplied the revised evaluator and handoff, separating the same-time gap at robot stopping from time, endpoint and heading differences at independent model completion, with handling for early model completion, failures and incomplete records.
+Thank you to **Yanxin Luo** for sharing the offline digital-twin evaluator and guidance, helping us compare robot/model timing, endpoints and headings more clearly.
 
-原始文件、具体贡献和后续整合分工见 [CONTRIBUTIONS.md](CONTRIBUTIONS.md)。
+感谢 **miaoyuwang** 分享最初的 **StampC3_SquareBenchmark** 工程，为正方形路径、编码器里程计和 Wi-Fi 数据记录提供了起始参考。
 
-See [CONTRIBUTIONS.md](CONTRIBUTIONS.md) for the original files, detailed contribution and subsequent integration responsibilities.
+Thank you to **miaoyuwang** for sharing the initial **StampC3_SquareBenchmark** project as a starting reference for square-path motion, encoder odometry and Wi-Fi data recording.
+
+更多致谢与相关资料见 [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md)。
+
+See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) for further thanks and related material.
 
 ## 来源与许可证 / Provenance and license
 
