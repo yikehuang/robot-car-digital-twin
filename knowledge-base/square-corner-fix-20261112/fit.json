@@ -1,0 +1,143 @@
+{
+  "source": "knowledge-base\\square-corner-fix-20261112\\source_square_v2.csv",
+  "source_sha256": "3f0ef5fe085faba0c073b56023260b0e5465fa304edb812e64ae273fc4246c07",
+  "quality": {
+    "raw_rows": 16745,
+    "invalid_rows": 0,
+    "clock_resets": 0
+  },
+  "run_summaries": [
+    {
+      "trial": 1,
+      "reason": "complete",
+      "duration_ms": 9846,
+      "odometry_closure_mm": 10.262547880521678,
+      "heading_error_deg": 1.256227565918185
+    },
+    {
+      "trial": 2,
+      "reason": "left_stalled",
+      "duration_ms": 10202,
+      "odometry_closure_mm": 26.348934039159914,
+      "heading_error_deg": 101.29351268016967
+    },
+    {
+      "trial": 3,
+      "reason": "left_stalled",
+      "duration_ms": 1946,
+      "odometry_closure_mm": 56.74529507368871,
+      "heading_error_deg": 3.095690967091838
+    },
+    {
+      "trial": 4,
+      "reason": "complete",
+      "duration_ms": 9992,
+      "odometry_closure_mm": 9.16034901081831,
+      "heading_error_deg": 4.352491490805133
+    },
+    {
+      "trial": 5,
+      "reason": "complete",
+      "duration_ms": 10030,
+      "odometry_closure_mm": 10.492226884698978,
+      "heading_error_deg": 3.5778525517882747
+    }
+  ],
+  "train_trials": [
+    1,
+    4
+  ],
+  "parameter_fit_holdout": [
+    5
+  ],
+  "excluded_trials": {
+    "2": "left_stalled",
+    "3": "first terminal left_stalled; later remote_stop records do not replace first stop"
+  },
+  "parameters": {
+    "left_forward_gain": 0.008676238904013197,
+    "right_forward_gain": 0.011191202953736117,
+    "right_reverse_gain": 0.010686162363964389,
+    "response_tau_ms": 77.32465246537046,
+    "coast_tau_ms": 10.477620972498688,
+    "left_reverse_gain": 0.008676238904013197,
+    "left_reverse_status": "unobserved; symmetry assumption"
+  },
+  "interval_scores": [
+    {
+      "trial": 1,
+      "role": "fit",
+      "old_interval_rmse_counts": 4.5629293469464205,
+      "new_interval_rmse_counts": 1.8087363105445198
+    },
+    {
+      "trial": 4,
+      "role": "fit",
+      "old_interval_rmse_counts": 5.036867165113975,
+      "new_interval_rmse_counts": 2.064066773997285
+    },
+    {
+      "trial": 5,
+      "role": "parameter_fit_holdout",
+      "old_interval_rmse_counts": 4.852032720113864,
+      "new_interval_rmse_counts": 1.9924661921169693
+    }
+  ],
+  "fit_windows": [
+    {
+      "trial": 1,
+      "rows_in_window": 208,
+      "unique_time_rows": 207,
+      "same_tick_records_collapsed": 1,
+      "same_tick_observation_conflicts": 0,
+      "first_stop_reason": "complete",
+      "run_duration_ms": 9846,
+      "min_interval_ms": 10,
+      "max_interval_ms": 51,
+      "stage_start_pwm_values_reconstructed_from_controller_code": 14,
+      "positive_left_samples": 163,
+      "negative_left_samples": 0,
+      "positive_right_samples": 111,
+      "negative_right_samples": 48
+    },
+    {
+      "trial": 4,
+      "rows_in_window": 210,
+      "unique_time_rows": 209,
+      "same_tick_records_collapsed": 1,
+      "same_tick_observation_conflicts": 0,
+      "first_stop_reason": "complete",
+      "run_duration_ms": 9992,
+      "min_interval_ms": 10,
+      "max_interval_ms": 52,
+      "stage_start_pwm_values_reconstructed_from_controller_code": 14,
+      "positive_left_samples": 166,
+      "negative_left_samples": 0,
+      "positive_right_samples": 112,
+      "negative_right_samples": 50
+    },
+    {
+      "trial": 5,
+      "rows_in_window": 212,
+      "unique_time_rows": 212,
+      "same_tick_records_collapsed": 0,
+      "same_tick_observation_conflicts": 0,
+      "first_stop_reason": "complete",
+      "run_duration_ms": 10030,
+      "min_interval_ms": 10,
+      "max_interval_ms": 52,
+      "stage_start_pwm_values_reconstructed_from_controller_code": 16,
+      "positive_left_samples": 168,
+      "negative_left_samples": 0,
+      "positive_right_samples": 112,
+      "negative_right_samples": 48
+    }
+  ],
+  "limitations": [
+    "Encoder-derived pose is not independent physical ground truth.",
+    "Trial 5 was inspected during diagnosis and is not a blind prospective test.",
+    "Effective gains fit sampled accepted PWM requests, not measured voltage or motor torque.",
+    "Low-PWM nonlinear response and zero-command coast cannot be isolated precisely at 50 ms telemetry cadence.",
+    "Only the plant is refitted; updated heading feedback requires new physical validation."
+  ]
+}

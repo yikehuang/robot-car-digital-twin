@@ -1,0 +1,6 @@
+# Preserve experimental snapshots and source checksums byte-for-byte.
+* -text
+*.class binary
+*.png binary
+app/source/** linguist-generated=true
+knowledge-base/firmware-backups/** linguist-vendored=true

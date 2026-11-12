@@ -1,0 +1,16 @@
+# Local pairing and host overrides
+**/robot-control.key
+**/robot-host.txt
+**/*.key
+# Local execution/build output and device memory images
+run-logs/
+build/
+robot-programs/DigitalTwin_LPath/logs/
+*.bin
+*.elf
+*.map
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

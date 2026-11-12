@@ -1,0 +1,6 @@
+trial,reason,duration_ms,position_rmse_mm,endpoint_error_mm,heading_error_deg
+1,complete,9846,9.3421,18.5049,9.1939
+2,left_stalled,10202,8.1368,6.0491,-88.6751
+3,left_stalled,1946,95.9426,139.7064,-46.4239
+4,complete,9992,11.7401,24.6521,6.9228
+5,complete,10030,9.1541,19.3632,7.5472

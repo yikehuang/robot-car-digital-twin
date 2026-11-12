@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-12",
+  "version": "SQUARE_REMOTE_V3",
+  "source_sha256": {
+    "robot-programs/StampC3_LPath/Controller.cpp": "2a9803b75f118823eeeebaca9df2edb1861db1c33f8b9a3bd89e72986c602df0",
+    "robot-programs/StampC3_LPath/Controller.h": "547b33b9cd9b0192835300f8f7a904ec48c170058962acbf3c692340aaef918c",
+    "robot-programs/StampC3_LPath/i2c_datatypes.h": "49f7637709ce30442944165a2ff13c64476e57d454fdd9b53165acccf549e9ec",
+    "robot-programs/StampC3_LPath/NetworkSettings.cpp": "47efaffba12507d886b23ca9a10f507a9cb7dd6544cfb34d7cdd4f46e1e8185f",
+    "robot-programs/StampC3_LPath/NetworkSettings.h": "16f2535adbcae956d399da2b1adde6e1ee57f054593b2dac34b472a6faf2963b",
+    "robot-programs/StampC3_LPath/OdometryModel.cpp": "db8d78f7c44f59232f3adba846196d1600e5c5afbd2e7af174df7936622a0e00",
+    "robot-programs/StampC3_LPath/OdometryModel.h": "922d4b5399874684c96e0dbcb49e310fa18a997793bd4e8c6b4da974cf5c615a",
+    "robot-programs/StampC3_LPath/RemoteControl.h": "951c2bf0fadb0e5bd7ae823e0761d98e785515e99e3d61b31cefadc2245cd314",
+    "robot-programs/StampC3_LPath/Robot.cpp": "4929ce56961e98af06516d4dc5dfde1f24ad7885227c8821d4af62ade4ca0137",
+    "robot-programs/StampC3_LPath/Robot.h": "7fd2a4d0b5289842d2631d28fa56976bb55876ef87467babe815610691e7be65",
+    "robot-programs/StampC3_LPath/RobotIMU.cpp": "65356226b8f575a174c562b1784d3e5ecd55fad928b1c6bd2fc5f2e6c0769824",
+    "robot-programs/StampC3_LPath/RobotIMU.h": "ad133ac31c9525bb33a7b7338b369f77eab9195b6dc961960853fbc522cb7cfb",
+    "robot-programs/StampC3_LPath/RobotWifiAP.cpp": "33a7e267a5100521f706a20dda35c229e8fa06afcb80528b6c63c87016efe65f",
+    "robot-programs/StampC3_LPath/RobotWifiAP.h": "03a412d59a7dbda59079108b77e4de9ee5a3b560215566bd7648e67183ab197d",
+    "robot-programs/StampC3_LPath/StampC3_LPath.ino": "2dd46392da04efd3776d94d14702b0fcc404175f5c019f0464cc1ca34b0a60ab",
+    "robot-programs/StampC3_LPath/TaskTimer.cpp": "5214c34007db47006e26bd58d88ab0ef54f9dc6cd1ff27e4d660a79a64847888",
+    "robot-programs/StampC3_LPath/TaskTimer.h": "22593f52e25e148b0dd702c92a25807f2f78b11af7c7be4c3c0366b9d57f7fbf",
+    "robot-programs/StampC3_LPath/WheelSpeedControl.h": "2de4a27e8fecd9cf58bcf6208a3d6b7327f89a52aebb4691f5be31beb0eafb0a",
+    "robot-programs/DigitalTwin_LPath/DigitalTwin_LPath.pde": "6eaebb04f52feafe00d57f0c7d5a9ccc047ba0dc7ad2b461768fbcbf995b315d",
+    "robot-programs/DigitalTwin_LPath/Graphing.pde": "281a61f8eaeac6413e86f1619dd780243ec611263e631cf3afb3f81176ed3b95",
+    "robot-programs/DigitalTwin_LPath/LiveSession.pde": "93b1ece202d5fe8299c9788173d6b6613e82a99379db03609625d1f08e8d03c1",
+    "robot-programs/DigitalTwin_LPath/LPathController.pde": "b9272f64442d47e75ad14e14428f292e556ba3f927e66b8bdd43ecf4be966cde",
+    "robot-programs/DigitalTwin_LPath/ModelCalibration.pde": "78d8cd449a61da09681540c9ca2a11a37135b29e47161f92eac5fa303c743aaf",
+    "robot-programs/DigitalTwin_LPath/MotorsModel.pde": "801d5088569167f5511364d99aa5c8504f961b689016fb60b2c6ea7fa4bd9edb",
+    "robot-programs/DigitalTwin_LPath/OdometryModel.pde": "1e83ed6f1f32d12f217d42594587210d79fc39a9245b9b64817065b4da9d5ba9",
+    "robot-programs/DigitalTwin_LPath/RemoteControlClient.pde": "03ea7fb2c16b8cabfc2c2ae30ecd39a8b466e9a47ef35ccb7133707ef7f6b6e5",
+    "robot-programs/DigitalTwin_LPath/RobotSimulation.pde": "e81d8fff80ed790351b0488bc8ab1a76e5cbc03098e5f2e5c3338a228195a6a4",
+    "robot-programs/DigitalTwin_LPath/Simulator.pde": "9d3c0b60dd09cdba1d2d257994bb763f44b0fe0698a4e6a2f85970d8e4bd6aa9",
+    "robot-programs/DigitalTwin_LPath/SquareWheelControl.pde": "1cd92d0394b829c30d8eb5d90df995697f95bbbaf320ee88e8a0b4bc19a1c624",
+    "robot-programs/DigitalTwin_LPath/SurfaceSensorModel.pde": "c54836e3815437807fd88772b6d04430f1246f9dd1a117390dd4bf445d9ab104",
+    "robot-programs/DigitalTwin_LPath/TCPTelemetry.pde": "43920f100c3fd4538abffef7b0f24d88ccbe576f5087ad151a16ba2d3c9c7554"
+  },
+  "firmware": {
+    "compile_success": true,
+    "program_storage_bytes": 1100375,
+    "dynamic_memory_bytes": 41596,
+    "upload_success": true,
+    "port": "COM7",
+    "sha256": "565a304820b802275227f79ca6490142f88715cc39ee065104ca8770bea88db3",
+    "esptool_hash_verified": true,
+    "nvs_not_erased": true
+  },
+  "startup": {
+    "initial_stop_failed": true,
+    "zero_pwm_observed": true,
+    "initial_log": "knowledge-base/square-corner-fix-20261112/post_upload_idle.log",
+    "recovered_by_explicit_authenticated_STOP": true
+  },
+  "integration": {
+    "log": "knowledge-base/square_remote_integration_20261112_181704.log",
+    "version_handshake": "PASS",
+    "authentication": "PASS",
+    "heartbeat": "PASS",
+    "stop_acknowledgment": "PASS",
+    "received_frames": 48,
+    "start_commands_sent": 0,
+    "nonzero_pwm_records": 0,
+    "recovered_waiting": true
+  },
+  "desktop": {
+    "build": "E:/Arduino/Build/DigitalTwin_Square_HeadingV3_20261112_javac",
+    "whole_generated_java_compiled": true,
+    "native_cli_success": false,
+    "native_cli_limitation": "net library discovery unavailable; fresh whole sketch compiled explicitly against bundled jars",
+    "tests_passed": [
+      "SquareFeedbackSelfTest",
+      "SquareRemoteControlSelfTest",
+      "SquareLiveSessionSelfTest"
+    ],
+    "live_gui_inspected": true,
+    "pid": 34276,
+    "screenshot": "output/square_heading_v3_ready_20261112.png"
+  },
+  "data": {
+    "frozen_source": "knowledge-base\\square-corner-fix-20261112\\source_square_v2.csv",
+    "sha256": "3f0ef5fe085faba0c073b56023260b0e5465fa304edb812e64ae273fc4246c07",
+    "train_trials": [
+      1,
+      4
+    ],
+    "parameter_fit_holdout": [
+      5
+    ],
+    "blind_prospective_test": false
+  },
+  "physical_v3_square_performance_verified": false,
+  "agent_sent_START": false,
+  "limitations": [
+    "The healthy plant refit improves V2 time-aligned path error but not V2 stopping-frame endpoint error.",
+    "New V3 controller results are synthetic until new measured runs exist.",
+    "Encoder-derived headings and distances are not external physical ground truth.",
+    "Sampled zero-command response is not an isolated physical coasting measurement."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-12",
+  "package": "Square V3 Team Share",
+  "version": "SQUARE_REMOTE_V3 share edition 1",
+  "sender_controller_and_plant_unchanged": {
+    "robot-programs/StampC3_LPath/Controller.cpp": "2a9803b75f118823eeeebaca9df2edb1861db1c33f8b9a3bd89e72986c602df0",
+    "robot-programs/StampC3_LPath/Controller.h": "547b33b9cd9b0192835300f8f7a904ec48c170058962acbf3c692340aaef918c",
+    "robot-programs/StampC3_LPath/WheelSpeedControl.h": "2de4a27e8fecd9cf58bcf6208a3d6b7327f89a52aebb4691f5be31beb0eafb0a",
+    "robot-programs/DigitalTwin_LPath/LPathController.pde": "b9272f64442d47e75ad14e14428f292e556ba3f927e66b8bdd43ecf4be966cde",
+    "robot-programs/DigitalTwin_LPath/SquareWheelControl.pde": "1cd92d0394b829c30d8eb5d90df995697f95bbbaf320ee88e8a0b4bc19a1c624",
+    "robot-programs/DigitalTwin_LPath/ModelCalibration.pde": "78d8cd449a61da09681540c9ca2a11a37135b29e47161f92eac5fa303c743aaf",
+    "robot-programs/DigitalTwin_LPath/MotorsModel.pde": "801d5088569167f5511364d99aa5c8504f961b689016fb60b2c6ea7fa4bd9edb"
+  },
+  "desktop": {
+    "whole_generated_java_compiled": true,
+    "java_class_version": 61,
+    "java_minimum_version": 17,
+    "tested_processing_version": "4.5.7",
+    "native_cli_build_claimed_success": false,
+    "native_cli_limitation": "Native library discovery unavailable; complete fresh generated Java compiled explicitly against bundled core/net jars.",
+    "tests_passed": [
+      "SquareFeedbackSelfTest",
+      "SquareRemoteControlSelfTest",
+      "SquareLiveSessionSelfTest"
+    ],
+    "offline_demo_opened": true,
+    "offline_demo_no_tcp_connections_observed": true,
+    "unpaired_live_launch_blocked": true,
+    "extracted_chinese_and_space_path_launch_passed": true,
+    "screenshot": "screenshots/offline_model_demo.png"
+  },
+  "share_firmware": {
+    "compiled": true,
+    "flashed": false,
+    "program_storage_bytes": 1100399,
+    "dynamic_memory_bytes": 41596,
+    "compiled_binary_sha256": "851a8ed0eca30eadc08b9fd70ab87c6b92b109d88e1d6534a94ecb184776480f",
+    "binary_distributed": false,
+    "configuration": "Recipient placeholders in RobotSharedConfig.h; configure and build for recipient robot."
+  },
+  "privacy": {
+    "sender_control_key_included": false,
+    "sender_ip_override_included": false,
+    "sender_wifi_passwords_included": false,
+    "flash_or_nvs_dumps_included": false,
+    "third_party_runtimes_included": false
+  },
+  "evidence_scope": {
+    "historical_data_controller": "V2",
+    "parameter_fit_train_trials": [
+      1,
+      4
+    ],
+    "parameter_fit_holdout": [
+      5
+    ],
+    "blind_prospective_validation": false,
+    "physical_v3_square_accuracy_verified": false
+  },
+  "package_build_issued_hardware_commands": false,
+  "share_only_changes": [
+    "Offline network-disabled demo entry",
+    "Recipient network configuration placeholders",
+    "Generic host defaults",
+    "Portable launch/build scripts",
+    "Correct main sketch property"
+  ],
+  "source_context": "SOURCES_AND_CHANGES.md",
+  "dependencies": "DEPENDENCIES.md"
+}
