@@ -1,0 +1,30 @@
+{
+  "confirmed": false,
+  "provenance": "User approximate span 60 mm and axle-to-middle-sensor 30 mm; intermediate pitch and alignment not measured.",
+  "sensor_offsets_forward_left_mm": [
+    [
+      30,
+      30
+    ],
+    [
+      30,
+      15
+    ],
+    [
+      30,
+      0
+    ],
+    [
+      30,
+      -15
+    ],
+    [
+      30,
+      -30
+    ]
+  ],
+  "wheel_radius_mm": 16.1,
+  "wheel_separation_mm": 83.6,
+  "counts_per_revolution": 358.3,
+  "optical_blur_mm": 1.0
+}

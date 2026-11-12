@@ -6,6 +6,12 @@ An encoder-controlled robot car and an independent Processing digital twin for a
 
 [中文详细说明 / Chinese setup guide](README_先看这里.md) · [英文技术概述 / English overview](OVERVIEW_EN.md) · [致谢 / Acknowledgements](ACKNOWLEDGEMENTS.md) · [环境依赖 / Dependencies](DEPENDENCIES.md) · [实机验证方法 / Physical validation](PHYSICAL_VALIDATION.md)
 
+## 新增：真实探头地图定位 / New: sensor-map localisation
+
+[黑白编码地图与传感器显示使用说明 / Coded map and live sensor viewer](sensor_map/README.md)。新版额外发送五个下视探头读数和编码器，在已知起点附近融合估计位置；没有强制正方形轨迹。当前已验证静止 USB/Wi-Fi 数据链路，**尚未验证打印地图上的实车定位精度**。约 60 mm 探头跨度与约 30 mm 前偏置仍需复测。
+
+The optional new viewer combines live reflectance observations and encoders near a known initial pose. It does not enforce a square. Stationary USB/Wi-Fi acquisition has been checked; **physical localisation on the printed map remains unvalidated**. Approximate sensor geometry needs measurement. Existing Processing displays below remain independent model comparisons.
+
 ![离线模型演示，不是实机测量轨迹 / Offline model demonstration, not a measured physical trajectory](screenshots/offline_model_demo.png)
 
 ## 快速开始：离线演示 / Quick start: offline demo
