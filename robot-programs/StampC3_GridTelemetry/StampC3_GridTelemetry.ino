@@ -51,7 +51,7 @@ void loop() {
   // controller continues to run even when no client is connected.
   server.update();
 
-  
+
   // Run an iteration of the robot controller code.
   // Develop controller routines in Controller.cpp; edit parameters in Controller.h.
   controller.update(robot, server);

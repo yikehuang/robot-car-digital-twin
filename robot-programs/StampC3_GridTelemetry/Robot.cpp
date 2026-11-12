@@ -202,7 +202,7 @@ bool Robot_c::playTone(uint16_t freq, uint16_t duration_ms) {
   RobotBuzzer_t new_tone;
   new_tone.freq = freq;
   new_tone.duration_ms = duration_ms;
-  
+
   if (!writeRegisterPayload(REGISTER_SET_BUZZER, new_tone)) return false;
 
   buzzer = new_tone;
