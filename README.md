@@ -98,11 +98,6 @@ The sender verified firmware/whole-sketch compilation, upload, idle telemetry, a
 
 Historical V2 fitting used trials 1 and 4 and excluded trial 5 from parameter fitting. Trial 5's position RMSE relative to wheel odometry decreased from **58.06 to 9.15 mm**, while stopping-frame endpoint discrepancy did not improve. Trial 5 was inspected during diagnosis, so this was not blind validation. These results measure historical model-versus-odometry agreement; **physical V3 accuracy still requires new independent distance/heading measurements**.
 
-## 与组员共享 / Share with teammates
-
-私有仓库需要先邀请组员：仓库所有者进入 **Settings → Collaborators → Add people**，输入组员的 GitHub 用户名或邮箱。组员接受邀请后，就能查看、克隆或下载，再把仓库链接发到小组群即可。
-
-For a private repository, the owner can invite teammates through **Settings → Collaborators → Add people**, using their GitHub usernames or email addresses. After accepting, teammates can view, clone or download the project. Share the repository link with the group.
 
 ## 来源与许可证 / Provenance and license
 
