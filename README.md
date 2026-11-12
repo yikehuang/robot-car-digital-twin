@@ -4,7 +4,7 @@
 
 An encoder-controlled robot car and an independent Processing digital twin for a **clockwise square with 200 mm sides**, developed for group work in University of Bristol Robotics Science & Systems (SEMTM0043/SEMTM42).
 
-[中文详细说明 / Chinese setup guide](README_先看这里.md) · [英文技术概述 / English overview](OVERVIEW_EN.md) · [环境依赖 / Dependencies](DEPENDENCIES.md) · [实机验证方法 / Physical validation](PHYSICAL_VALIDATION.md)
+[中文详细说明 / Chinese setup guide](README_先看这里.md) · [英文技术概述 / English overview](OVERVIEW_EN.md) · [组员贡献 / Contributions](CONTRIBUTIONS.md) · [环境依赖 / Dependencies](DEPENDENCIES.md) · [实机验证方法 / Physical validation](PHYSICAL_VALIDATION.md)
 
 ![离线模型演示，不是实机测量轨迹 / Offline model demonstration, not a measured physical trajectory](screenshots/offline_model_demo.png)
 
@@ -98,6 +98,16 @@ The sender verified firmware/whole-sketch compilation, upload, idle telemetry, a
 
 Historical V2 fitting used trials 1 and 4 and excluded trial 5 from parameter fitting. Trial 5's position RMSE relative to wheel odometry decreased from **58.06 to 9.15 mm**, while stopping-frame endpoint discrepancy did not improve. Trial 5 was inspected during diagnosis, so this was not blind validation. These results measure historical model-versus-odometry agreement; **physical V3 accuracy still requires new independent distance/heading measurements**.
 
+
+## 组员贡献 / Team contributions
+
+**Yanxin Luo — 数字孪生离线评估改进。** 提供修改后的评估脚本与交接说明，将“小车停车时的同时间差距”与“模型独立完成后的时间、终点及航向差距”分别记录，并处理模型提前结束、失败和不完整记录。
+
+**Yanxin Luo — improved offline digital-twin evaluation.** Supplied the revised evaluator and handoff, separating the same-time gap at robot stopping from time, endpoint and heading differences at independent model completion, with handling for early model completion, failures and incomplete records.
+
+原始文件、具体贡献和后续整合分工见 [CONTRIBUTIONS.md](CONTRIBUTIONS.md)。
+
+See [CONTRIBUTIONS.md](CONTRIBUTIONS.md) for the original files, detailed contribution and subsequent integration responsibilities.
 
 ## 来源与许可证 / Provenance and license
 
