@@ -1,0 +1,50 @@
+[
+  {
+    "file": "manual.html",
+    "url": "https://www.pololu.com/docs/0J83/all",
+    "sha256": "fbee157013514468822aeb3d5cfae3f87cddcf4449842dcf06e366e90c3f49c4",
+    "bytes": 205457
+  },
+  {
+    "file": "manual.pdf",
+    "url": "https://www.pololu.com/docs/pdf/0J83/3pi_plus_32u4.pdf",
+    "sha256": "56e79b377ed25adb17710603524f30568df9fcfebea15159b40380f6057ad35b",
+    "bytes": 2731922
+  },
+  {
+    "file": "chassis.html",
+    "url": "https://www.pololu.com/product/3725",
+    "sha256": "bcfb5b2de4046f8958af477dfc2c2716e95d214dbb3a8d3dd40e8d9f59b1a8de",
+    "bytes": 75567
+  },
+  {
+    "file": "board-lcd.pdf",
+    "url": "https://www.pololu.com/file/0J1792/3pi-plus-32u4-control-board-dimensions.pdf",
+    "sha256": "540d32aa8bd4945288eb4771c193c33836bce460b7abb60b048549812c465e01",
+    "bytes": 826976
+  },
+  {
+    "file": "board-oled.pdf",
+    "url": "https://www.pololu.com/file/0J1825/3pi-plus-32u4-oled-control-board-dimensions.pdf",
+    "sha256": "ff106c265acc6aece62832285a360a387e58589f4de7534976db2608d78acc5a",
+    "bytes": 821848
+  },
+  {
+    "file": "robot-lcd.pdf",
+    "url": "https://www.pololu.com/file/0J1796/3pi-plus-32u4-robot-dimensions.pdf",
+    "sha256": "a2443b984ac4ec9d176985436f50c07c31b5fcc29a6f45867f6d828af877c431",
+    "bytes": 776043
+  },
+  {
+    "file": "robot-oled.pdf",
+    "url": "https://www.pololu.com/file/0J1827/3pi-plus-32u4-oled-robot-dimensions.pdf",
+    "sha256": "7b7ec4332092e4a2a546e2b678119c31c99b6b1a4c99f0c8c9d7d4999d28027c",
+    "bytes": 1976564
+  },
+  {
+    "file": "chassis.pdf",
+    "url": "https://www.pololu.com/file/0J1795/3pi-plus-chassis-kit-dimensions.pdf",
+    "sha256": "a5cad2947c5358bb1f66290a259237a76e790db902c2acd558a18bb1f42984c7",
+    "bytes": 1270165
+  }
+]

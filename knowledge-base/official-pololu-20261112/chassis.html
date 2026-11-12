@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_32x32-f40058cd34e1fec5906522ec0c9eb39b303192067c0e353a30796e859ce41106.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_192x192-52532413e1c353491bfa0a2dd977aacf020e8ca4104064094121739bad21c4bf.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_96x96-fcf7f6d6568f76d479e5ae1822ded335e0bbd75ab7efd0de7e010bb41fd83e41.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_16x16-13632635dc6dd0e11ba9a38071e8218d26d62e71f8ebafacd9929c3136117372.png" sizes="16x16" />
+<link rel="apple-touch-icon" type="image/png" href="https://a.pololu-files.com/assets/favicon_96x96-fcf7f6d6568f76d479e5ae1822ded335e0bbd75ab7efd0de7e010bb41fd83e41.png" />
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' integrity='sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=' media='all' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css' integrity='sha256-2RdmDD1veq0y68SwASxtC7hKE+IBoBLjNLzKS59Ghsk=' media='all' rel='stylesheet'>
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css' integrity='sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=' media='all' rel='stylesheet'>
+<link rel="stylesheet" crossorigin="anonymous" href="https://a.pololu-files.com/assets/application-6c47e7bbf8b1d7a9273536f8219c3ef577a02e79df7e2ff8ba23d96132a74463.css" media="all" integrity="sha256-BhRmp00yDGd0h0qY3chly5KMMh6pKFhr4dCg9F/+SnM=" />
+<script crossorigin='anonymous' integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=' src='https://a.pololu-files.com/mirror/code.jquery.com/jquery-1.12.4.min.js'></script>
+<script crossorigin='anonymous' integrity='sha256-4Cr335oZDYg4Di3OwgUOyqSTri0jUm2+7Gf2kH3zp1I=' src='https://a.pololu-files.com/mirror/cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+<script crossorigin='anonymous' integrity='sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=' src='https://a.pololu-files.com/mirror/code.jquery.com/ui/1.12.1/jquery-ui.min.js'></script>
+<link crossorigin='anonymous' href='https://a.pololu-files.com/mirror/code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' integrity='sha256-RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A' media='all' rel='stylesheet'>
+<script class='braintree-gateway' src='https://js.braintreegateway.com/web/3.88.4/js/client.min.js'></script>
+<script class='braintree-gateway' src='https://js.braintreegateway.com/web/3.88.4/js/hosted-fields.min.js'></script>
+<script src="https://a.pololu-files.com/assets/application-e66fa754e0b8e9eae8aee5400dcc87c5ee1d32ff5bab89453abb5e6c323cf188.js" crossorigin="anonymous" integrity="sha256-cxg73x+CuJ9fbknOm5DiNGrnSQBhfh1wqgIN0YnEqoE="></script>
+<script type="importmap" data-turbo-track="reload">{
+  "integrity":
+{"https://a.pololu-files.com/assets/application_module-765f0f526c59caa9c9857c01889e68833710c17121ab6f9093f3a0a809af7bd4.js":"sha256-s+WZHcA06TsuXtPz2xeDSGgG6j+QSXvT2ghPYhJLLow=","https://a.pololu-files.com/assets/price_notification-e46ad505e4a01eb1a311cfc2e3e1bcc1fb6b1df47904cd3266d1c604e186aeef.js":"sha256-dMqQKgrJg+aoe44ZPYCTOrmXPQmzk+4dG1qmmdt6iSA=","https://a.pololu-files.com/assets/stock_notification-f27d00b99405c410cf3c23f1f151c5701276c2577449e2123ab34938e82d92d6.js":"sha256-TXG5Dvr05BAeQMNdQcyJS5Z5IQtw4aqM0HM1/m/QxoE=","https://a.pololu-files.com/assets/email_verification_send_handler-c06bf3ee7010809c6f7e62c9ae106d071a9373dce8c9e6c324c07aeacd069db2.js":"sha256-Rjuw+y6QuyfBGxpXeTICO2/PJRg4iMfzzleu7n7XUz8=","https://a.pololu-files.com/assets/payment_handler-49a20512068cb88565bc275464d6002af52baec06430fbdc9480f530a2c5b9a7.js":"sha256-PmVdEt5BorGjsZxOo7BfGw8aes3BCxnDQvw55paraHo="},
+  "imports": {
+    "application": "https://a.pololu-files.com/assets/application_module-765f0f526c59caa9c9857c01889e68833710c17121ab6f9093f3a0a809af7bd4.js",
+    "price_notification": "https://a.pololu-files.com/assets/price_notification-e46ad505e4a01eb1a311cfc2e3e1bcc1fb6b1df47904cd3266d1c604e186aeef.js",
+    "stock_notification": "https://a.pololu-files.com/assets/stock_notification-f27d00b99405c410cf3c23f1f151c5701276c2577449e2123ab34938e82d92d6.js",
+    "email_verification_send_handler": "https://a.pololu-files.com/assets/email_verification_send_handler-c06bf3ee7010809c6f7e62c9ae106d071a9373dce8c9e6c324c07aeacd069db2.js",
+    "payment_handler": "https://a.pololu-files.com/assets/payment_handler-49a20512068cb88565bc275464d6002af52baec06430fbdc9480f530a2c5b9a7.js",
+    "braintree": "https://js.braintreegateway.com/web/dropin/1.46.1/js/dropin.js"
+  }
+}</script>
+
+<script type="module">import "application"</script>
+<script>
+  if(document.domain.indexOf("pololu-files.com") == -1) {
+    $.ajax({
+    url: "https://www.googletagmanager.com/gtag/js?id=G-G4ENPJ5RV1",
+    dataType: "script"
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', "G-G4ENPJ5RV1");
+  }
+</script>
+
+<link rel="stylesheet" href="https://a.pololu-files.com/assets/print-ac5d562ac93a31ac3e5c942e261bf17032bf5da61b940dea46300fe83f1e72dc.css" media="print" />
+
+<title>Pololu - 3pi+ Chassis Kit (No Motors or Electronics)</title>
+
+<meta name="description" content="This kit gives you the structural pieces you need to build your own 3pi+ robot.  The chassis includes an integrated ball caster and battery holder for four AAA cells, a pair of 32×7 mm wheels with silicone tires, a bumper skirt, and motor clips that can be used to hold in the gear motors for operation without the bumper skirt.  The chassis is designed to work with our Micro Metal Gearmotors, and you can add a 3pi+ 2040 Control Board or 3pi+ 32U4 Control Board or your own electronics to complete your robot.  Motors and electronics are not included." />
+<meta name="keywords" content="Pololu,robotics,robot electronics,robot kits,robot parts,ir beacon,servo controller,motor controller,robot sensors,robot chassis,robot gearboxes,robot tires, ball casters, tamiya parts,elenco kits" />
+<meta property="og:url" content="https://www.pololu.com/product/3725" />
+<meta property="og:title" content="Pololu - 3pi+ Chassis Kit (No Motors or Electronics)" />
+<meta property="og:description" content="This kit gives you the structural pieces you need to build your own 3pi+ robot.  The chassis includes an integrated ball caster and battery holder for four AAA cells, a pair of 32×7 mm wheels with silicone tires, a bumper skirt, and motor clips that can be used to hold in the gear motors for operation without the bumper skirt.  The chassis is designed to work with our Micro Metal Gearmotors, and you can add a 3pi+ 2040 Control Board or 3pi+ 32U4 Control Board or your own electronics to complete your robot.  Motors and electronics are not included." />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta property="og:image" content="https://a.pololu-files.com/picture/0J11047.1200x627.jpg?b9883e17785885c130e08d95e9b8eb2a" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Pololu" />
+<meta name="twitter:title" content="Pololu - 3pi+ Chassis Kit (No Motors or Electronics)" />
+<meta name="twitter:description" content="This kit gives you the structural pieces you need to build your own 3pi+ robot.  The chassis includes an integrated ball caster and battery holder for four AAA cells, a pair of 32×7 mm wheels with silicone tires, a bumper skirt, and motor clips that can be used to hold in the gear motors for operation without the bumper skirt.  The chassis is designed to work with our Micro Metal Gearmotors, and you can add a 3pi+ 2040 Control Board or 3pi+ 32U4 Control Board or your own electronics to complete your robot.  Motors and electronics are not included." />
+<meta name="twitter:image" content="https://a.pololu-files.com/picture/0J11047.1200x627.jpg?b9883e17785885c130e08d95e9b8eb2a" />
+<script class='structured_data' type='application/ld+json'>
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Robot Kits","item":"https://www.pololu.com/category/2/robot-kits"},{"@type":"ListItem","position":2,"name":"3pi Robots and Accessories","item":"https://www.pololu.com/category/76/3pi-robots-and-accessories"}]}
+</script>
+<script class='structured_data' type='application/ld+json'>
+{"@context":"https://schema.org","@type":"Product","image":"https://a.pololu-files.com/picture/0J11047.600x480.jpg?b9883e17785885c130e08d95e9b8eb2a","name":"3pi+ Chassis Kit (No Motors or Electronics)","description":"This kit gives you the structural pieces you need to build your own 3pi+ robot.  The chassis includes an integrated ball caster and battery holder for four AAA cells, a pair of 32×7 mm wheels with silicone tires, a bumper skirt, and motor clips that can be used to hold in the gear motors for operation without the bumper skirt.  The chassis is designed to work with our Micro Metal Gearmotors, and you can add a 3pi+ 2040 Control Board or 3pi+ 32U4 Control Board or your own electronics to complete your robot.  Motors and electronics are not included.","sku":3725,"brand":"Pololu","offers":{"@type":"Offer","price":"27.95","priceCurrency":"USD","URL":"https://www.pololu.com/product/3725","availability":"InStock"}}
+</script>
+
+<script src="https://a.pololu-files.com/assets/syntaxhighlight-91017fb9868118fd42306075e0164112dd3d3e16331dc462f55ad4497e7fca3d.js" defer="defer"></script>
+</head>
+
+<body class='math_ignore' onload='externalLinksNewWindow(); if(document.onLoadHandler){document.onLoadHandler();}  productInit(&#39;/product/3725&#39;);'>
+
+<div id='main'>
+<h2 id="breadcrumbs"><a href="/category/2/robot-kits">Robot Kits</a> &raquo; <a href="/category/76/3pi-robots-and-accessories">3pi Robots and Accessories</a> &raquo;</h2>
+<h1 id="page_title">3pi+ Chassis Kit (No Motors or Electronics)</h1>
+<div data-url='/product/3725' id='contents'>
+<!-- CONTENTS_BEGIN /product/3725 -->
+<div data-javascript-not-loaded-message='&lt;!-- javascript_not_loaded_message --&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Your browser failed to load our JavaScript files, which are required for checkout.  Please check that you are not blocking or disabling our scripts and &lt;a href=&quot;/contact&quot;&gt;contact us&lt;/a&gt; if you are still unable to proceed.' id='javascript_not_loaded_message' style='display:none;'></div>
+<div data-braintree-not-loaded-message='&lt;!-- braintree_not_loaded_message --&gt;&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Your browser failed to connect to our secure payment processor, Braintree Payments.  You will be unable to enter your credit card information at  the payment step of checkout unless this is fixed.&lt;/p&gt;
+&lt;p&gt;Some things to try:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Check for network problems or things like script blockers that could be blocking &lt;a href=&quot;https://js.braintreegateway.com/web/3.58.0/js/client.min.js&quot;&gt;this file&lt;/a&gt;.&lt;/li&gt;
+	&lt;li&gt;Try completing checkout on a device on a different network, such as a phone with Wi-Fi disabled.&lt;/li&gt;
+	&lt;li&gt;Select the option to pay with PayPal and enter your credit card on their site. (You don&amp;#8217;t need a PayPal account.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please &lt;a href=&quot;/contact&quot;&gt;contact us&lt;/a&gt; if you continue to have trouble with checkout!&lt;/p&gt;' id='braintree_not_loaded_message' style='display:none;'></div>
+
+<div class='product_top'><span class='product_top_pictures'>
+<div>
+<a class="noscript-fallback" href="https://a.pololu-files.com/picture/0J11047.1200.jpg?b9883e17785885c130e08d95e9b8eb2a"><img alt="" title="Click to zoom" id="main_picture_img" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11047&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit (No Motors or Electronics).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11047.98x98.jpg?b9883e17785885c130e08d95e9b8eb2a&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11047.600x480.jpg?b9883e17785885c130e08d95e9b8eb2a&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11047.1200.jpg?b9883e17785885c130e08d95e9b8eb2a&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11045&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11045.98x98.jpg?9ca4c3eabb40a5ef5bf3ceca81cfea11&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11045.600x480.jpg?9ca4c3eabb40a5ef5bf3ceca81cfea11&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11045.1200.jpg?9ca4c3eabb40a5ef5bf3ceca81cfea11&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11046&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11046.98x98.jpg?a346bc3da021040b638672b7cf92eef3&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11046.600x480.jpg?a346bc3da021040b638672b7cf92eef3&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11046.1200.jpg?a346bc3da021040b638672b7cf92eef3&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11048&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, top view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11048.98x98.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11048.600x480.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11048.1200.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11049&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, bottom view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11049.98x98.jpg?29761d6f0971ee2df7270cc44c822bf5&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11049.600x480.jpg?29761d6f0971ee2df7270cc44c822bf5&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11049.1200.jpg?29761d6f0971ee2df7270cc44c822bf5&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11050&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11050.98x98.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11050.600x480.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11050.1200.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11051&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, side view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11051.98x98.jpg?ed44ae19ba684dd36caabcc6f81cb245&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11051.600x480.jpg?ed44ae19ba684dd36caabcc6f81cb245&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11051.1200.jpg?ed44ae19ba684dd36caabcc6f81cb245&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11052&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11052.98x98.jpg?1d6069eb19a031b9f161d83a769ef95a&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11052.600x480.jpg?1d6069eb19a031b9f161d83a769ef95a&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11052.1200.jpg?1d6069eb19a031b9f161d83a769ef95a&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11053&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view with motors installed and without outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11053.98x98.jpg?bbe4e0d1349257264515cd79da18da9b&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11053.600x480.jpg?bbe4e0d1349257264515cd79da18da9b&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11053.1200.jpg?bbe4e0d1349257264515cd79da18da9b&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11054&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view with motors installed and without outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11054.98x98.jpg?561267833a210f609a694ebb28fc87d0&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11054.600x480.jpg?561267833a210f609a694ebb28fc87d0&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11054.1200.jpg?561267833a210f609a694ebb28fc87d0&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11055&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, top view with motors installed and without outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11055.98x98.jpg?c544ddfeb324b377d4614b4a982d5dce&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11055.600x480.jpg?c544ddfeb324b377d4614b4a982d5dce&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11055.1200.jpg?c544ddfeb324b377d4614b4a982d5dce&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11099&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11099.98x98.jpg?2888a0d1828aba6eb33284b34fc6d419&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11099.600x480.jpg?2888a0d1828aba6eb33284b34fc6d419&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11099.1200.jpg?2888a0d1828aba6eb33284b34fc6d419&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11098&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11098.98x98.jpg?b361f6ddfb0ccc3603487a5e7f1cc945&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11098.600x480.jpg?b361f6ddfb0ccc3603487a5e7f1cc945&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11098.1200.jpg?b361f6ddfb0ccc3603487a5e7f1cc945&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11100&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, top view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11100.98x98.jpg?f7d3442bc873791926303b1abe48a3d2&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11100.600x480.jpg?f7d3442bc873791926303b1abe48a3d2&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11100.1200.jpg?f7d3442bc873791926303b1abe48a3d2&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11056&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11056.98x98.jpg?fa62c445c03ac3f93ae0ace269c8f9b4&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11056.600x480.jpg?fa62c445c03ac3f93ae0ace269c8f9b4&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11056.1200.jpg?fa62c445c03ac3f93ae0ace269c8f9b4&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11057&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, side view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11057.98x98.jpg?63d394820f8488ecb6b33c2b1c792d1e&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11057.600x480.jpg?63d394820f8488ecb6b33c2b1c792d1e&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11057.1200.jpg?63d394820f8488ecb6b33c2b1c792d1e&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11058&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11058.98x98.jpg?57d2570e4510158bf4d38c8b5bd850b3&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11058.600x480.jpg?57d2570e4510158bf4d38c8b5bd850b3&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11058.1200.jpg?57d2570e4510158bf4d38c8b5bd850b3&quot;,&quot;longest_side&quot;:1200},{&quot;id&quot;:&quot;0J11094&quot;,&quot;caption&quot;:&quot;\u003cp\u003eContents of the 3pi+ Chassis Kit.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11094.98x98.jpg?0f18c1f33d42ced7808f05ab32fec9d5&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11094.600x480.jpg?0f18c1f33d42ced7808f05ab32fec9d5&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11094.1200.png?0f18c1f33d42ced7808f05ab32fec9d5&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11047" data-picture-longest-side="1200" data-gallery-id="main-pictures" src="https://a.pololu-files.com/picture/0J11047.600x480.jpg?b9883e17785885c130e08d95e9b8eb2a" /></a>
+<div id='related_pictures_gallery'></div>
+</div>
+
+</span><span class='order_form_section'>
+<div class='order_form_with_price_notification'>
+<form action='/cart/add' data-product-id='3725' data-product-ui='short_order_form' enctype='multipart/form-data' method='post'>
+<fieldset class='hidden'>
+<input type="hidden" name="session_id" value="e21baeaa7610a56bef903ce1521f2419" />
+<input name='product[id]' type='hidden' value='3725'>
+</fieldset>
+<div>
+<div>
+<span data-product-ui='short_order_form_on_sale' style='display: none'></span>
+<span class='message_positive' data-product-ui='short_order_form_new' style='display: none'>
+<!-- product_recently_added_to_website -->New!
+</span>
+</div>
+<table class='part_number_and_stock text_left'>
+<tr>
+<td class='part_number' style='white-space: nowrap'>
+<span class='label'>Pololu item #:</span>
+<span class='value'>3725</span>
+</td>
+<td class="td_right" data-product-ui="order_form_stock"><span></span></td>
+</tr>
+<tr>
+<td style='white-space: nowrap'>
+<span class='label'>Brand:</span>
+<span class='value'><a href="/brands/pololu">Pololu</a></span>
+</td>
+<td class='td_right'>
+<a data-lightbox-link="true" data-lightbox-height="25rem" data-lightbox-width="34rem" href="/product/3725/supply-outlook">supply outlook</a>
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+<div class='stock-notification-display-div'>
+<div class='stock-notification-label-and-button-div' data-available-stock='100' data-product-id='0J3725'>
+<span class='label'>
+</span>
+<button class='enable-stock-notification-button btn-small btn-link' data-logged-in='false' type='button'>
+Get stock notification
+</button>
+<a class="fa fa-question-circle" data-lightbox-link="true" data-lightbox-height="21rem" data-lightbox-width="27rem" href="/ordering/stock-notifications"></a>
+</div>
+</div>
+
+<tr>
+<td colspan='2'>
+<div class='stock-notification-form-div' style='display: none;'>
+<hr>
+<div class='spaced-row'>
+<div>
+<label>Notify me when stock is at least</label>
+<input class='stock_quantity' name='wishlist_product[notify_stock_quantity]' size='2' type='text'>
+</div>
+<button class='disable-stock-notification-button btn-small btn-link' style='display: none; margin-left: 8px;' type='button'>Cancel</button>
+</div>
+<div>
+<label>Optional: desired quantity</label>
+<input class='desired_quantity' name='wishlist_product[quantity_desired]' size='2' type='text'>
+</div>
+<div class='spaced-row'>
+<div>
+<button class='remove-stock-notification-button btn-small btn-red' type='button'>Remove</button>
+</div>
+<button class='save-stock-notification-button btn-small btn-green' type='button'>Save</button>
+</div>
+<hr>
+</div>
+
+</td>
+</tr>
+
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+<span class='label'>Status:</span>
+<span class='value'>Active and Preferred&nbsp;<a class="fa fa-question-circle" data-lightbox-link="true" data-lightbox-height="21rem" data-lightbox-width="27rem" href="/product-status-overview"></a></span>
+</td>
+</tr>
+<tr>
+<td>
+<a title="RoHS 3 compliant" data-lightbox-link="true" data-lightbox-height="17rem" data-lightbox-width="25rem" href="/compliance/rohs3-compliant"><img style="width: 76px; height: 16px; min-width: 76px;" alt="RoHS 3 compliant" src="https://a.pololu-files.com/assets/rohs3_compliant_yes-cde9d1a22538fcb174660dfa52f6fb93f93fcdfcf99e282ad9cf792ffa8f3124.png" /></a>
+</td>
+<td class='td_right'></td>
+</tr>
+<tr class='free_shipping_info' style='display: none'>
+<td colspan='2'>
+<a class="shipping_info_popup_link " title="This item could qualify for free shipping" data-lightbox-link="true" data-lightbox-height="17rem" data-lightbox-width="25rem" href="/ordering/potential-free-shipping-usa"><img style="width: 16px; height: 11px; min-width: 16px;" alt="This item could qualify for free shipping" src="https://a.pololu-files.com/assets/free_shipping_usa_gray-7c9ae1b4621ead73c8493cff1b11345529bb7604d4584577749f53b7c7a0628f.png" /></a>&nbsp;Free shipping in USA over $100&nbsp;<a class="shipping_info_popup_link " title="This item could qualify for free shipping" data-lightbox-link="true" data-lightbox-height="17rem" data-lightbox-width="25rem" href="/ordering/potential-free-shipping-usa"><span class="fa fa-question-circle" /></a>
+</td>
+</tr>
+
+</table>
+
+
+</div>
+<hr>
+<table class='pricing'>
+<tr>
+<th>
+Price break
+</th>
+<th>
+Unit price (US$)
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td class=''>
+27.95
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td class=''>
+25.71
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td class=''>
+23.66
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td class=''>
+21.76
+</td>
+</tr>
+</table>
+<hr>
+
+<table class='add_to_cart'>
+<tr>
+<td class='add_to_cart'>
+<label for='product_quantity'>Quantity:</label>
+<input id='product_quantity' name='product[quantity]' size='2' type='text' value='1'>
+<br>
+<span class='allow_backorders'><!-- allow_backorders --><a href="/ordering#backorders">backorders</a> allowed</span>
+</td>
+<td class='td_right'>
+<div>
+<button alt="Add to cart" name="submit" value="add_to_cart" title="Adds 3pi+ Chassis Kit (No Motors or Electronics) to your cart." data-add-to-cart="true" data-freeze-cart="false" class="btn-medium btn-green">Add to cart</button><br/>
+<button alt="Add to list" name="submit" value="add_to_list" title="Adds 3pi+ Chassis Kit (No Motors or Electronics) to your list." class="btn-small btn-link">Add to list</button>
+</div>
+</td>
+
+</tr>
+</table>
+</form>
+<div>
+<div class='price-notification-container'>
+<div class='price-notification-display-div' style='display: flex; align-items: center;
+margin-top: 0.3em; margin-bottom: 0.3em;'>
+<span class='label price-notification-label'>
+</span>
+<span class='right-span'>
+<button class='enable-price-notification-button btn-small btn-link' data-logged-in='false' type='button'>
+Get price notification
+</button>
+<a class="fa fa-question-circle" data-lightbox-link="true" data-lightbox-height="21rem" data-lightbox-width="27rem" href="/ordering/price-change-notifications"></a>
+</span>
+</div>
+<div class='price-notification-form-div' style='display: none;'>
+<form action='https://www.pololu.com/wishlist_product/set_price_notification' enctype='multipart/form-data' method='post' style='width: 100%'>
+<input type="hidden" name="wishlist_product[id]" id="wishlist_product_id" autocomplete="off" />
+<input type="hidden" name="product_id" id="product_id" value="0J3725" autocomplete="off" />
+<input type="hidden" name="session_id" value="e21baeaa7610a56bef903ce1521f2419" />
+<hr>
+<div class='spaced-row'>
+<label>Notify me</label>
+<button class='disable-price-notification-button btn-small btn-link' type='button'>Cancel</button>
+</div>
+<div class='align-center indent-radio'>
+<input checked class='notify-any-price-change' id='notify-any-price-change' name='wishlist_product[price_notification]' type='radio' value='notify-any-price-change'>
+<label for='notify-any-price-change'>&nbspon any price change</label>
+</div>
+<div class='align-center indent-radio'>
+<input class='notify-any-price-drop' id='notify-any-price-drop' name='wishlist_product[price_notification]' type='radio' value='notify-any-price-drop'>
+<label for='notify-any-price-drop'>&nbspon any price drop</label>
+</div>
+<div class='align-center indent-radio'>
+<input class='notify-at-target-price' id='notify-at-target-price' name='wishlist_product[price_notification]' type='radio' value='notify-at-target-price'>
+<label for='notify-at-target-price'>&nbspat or below $</label>
+<input class='target-price' name='wishlist_product[target_price]' placeholder='price' size='3' type='text' value=''>
+<label for='notify-at-target-price'>&nbspat qty&nbsp</label>
+<input class='quantity' name='wishlist_product[target_quantity]' placeholder='qty' size='2' type='text' value=''>
+</div>
+<div class='spaced-row'>
+<div>
+</div>
+<button class='save-price-notification-button btn-small btn-green' type='submit'>Save</button>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+<script type='module'>
+import {PriceNotification} from 'price_notification'
+new PriceNotification();
+import {StockNotification} from 'stock_notification'
+new StockNotification();
+</script>
+
+</span>
+<div id='short_description'>
+<p>This kit gives you the structural pieces you need to build your own 3pi+ robot.  The chassis includes an integrated ball caster and battery holder for four AAA cells, a pair of 32×7 mm wheels with silicone tires, a bumper skirt, and motor clips that can be used to hold in the gear motors for operation without the bumper skirt.  The chassis is designed to work with our <a href="/category/60/micro-metal-gearmotors">Micro Metal Gearmotors</a>, and you can add a <a href="/product/5006">3pi+ 2040 Control Board</a> or <a href="/product/4973">3pi+ 32U4 Control Board</a> or your own electronics to complete your robot.  <strong>Motors and electronics are not included.</strong></p>
+
+</div>
+<p class='compare_link'>
+<span class="compare"><a href="/search/compare/76"><img alt="" src="https://a.pololu-files.com/assets/compare-cd658e4a1effbb8bf041401c86b9bef3949f6946b740d13b04703d381ec5594b.png" /></a><a title="Compare all products in 3pi Robots and Accessories" href="/search/compare/76">Compare all products in 3pi Robots and Accessories</a></span> or <span class="compare"><a href="/search/compare/26"><img alt="" src="https://a.pololu-files.com/assets/compare-cd658e4a1effbb8bf041401c86b9bef3949f6946b740d13b04703d381ec5594b.png" /></a><a title="Compare all products in Chassis" href="/search/compare/26">Chassis</a></span>.
+</p></div>
+
+<a name="tabs"></a><table class="tabs"><tr><td>&nbsp;</td><th class="selected "><span id="name">Description</span></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/3725/specs&#39;);" href="/product/3725/specs"><span id="name">Specs</span> <span id="count">(2)</span></a></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/3725/pictures&#39;);" href="/product/3725/pictures"><span id="name">Pictures</span> <span id="count">(18)</span></a></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/3725/resources&#39;);" href="/product/3725/resources"><span id="name">Resources</span> <span id="count">(2)</span></a></th><td>&nbsp;</td><th class="empty"><span id="name">FAQs</span> <span id="count">(0)</span></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/3725/blog&#39;);" href="/product/3725/blog"><span id="name">On the blog</span> <span id="count">(2)</span></a></th><td>&nbsp;</td><th class=""><a onclick="saveScrollPosition(&#39;/product/3725/distributors&#39;);" href="/product/3725/distributors"><span id="name">Distributors</span> <span id="count">(7)</span></a></th><td class="last">&nbsp;</td></tr></table><div class="tab_page"><h2>Overview</h2>
+<table class="picture_with_caption right"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J11047.1200.jpg?b9883e17785885c130e08d95e9b8eb2a" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11047&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit (No Motors or Electronics).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11047.98x98.jpg?b9883e17785885c130e08d95e9b8eb2a&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11047.600x480.jpg?b9883e17785885c130e08d95e9b8eb2a&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11047.1200.jpg?b9883e17785885c130e08d95e9b8eb2a&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11047" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11047.300.jpg?b9883e17785885c130e08d95e9b8eb2a" /></a></td><p></tr><tr><th style="max-width: 300px"><p>3pi+ Chassis Kit (No Motors or Electronics).</p></th></tr></table></p>
+<p>This chassis gives you everything you need to build your own differential-drive 3pi+ robot based on you own choice of <a href="/category/60/micro-metal-gearmotors">Micro Metal Gearmotors</a> and electronics.  Motors are deliberately not included with the kit so that you can pick your own to customized the performance of your robot.  The kit includes the following parts:</p>
+<ul>
+	<li>3pi+ chassis, with integrated 4×AAA battery holder and ball caster</li>
+	<li>3pi+ bumper skirt</li>
+	<li>two 3pi+ motor clips</li>
+	<li>two 32×7 mm Pololu wheel hubs and silicone tires</li>
+	<li>four single AAA battery contacts</li>
+	<li>two double AAA battery contacts</li>
+	<li>1/2″-diameter plastic ball</li>
+</ul>
+<p>The majority of the chassis is made from white ABS plastic.  The 3pi+ chassis has integrated holders designed specifically for Micro Metal Gearmotors, which can then be securely held in place by snapping on the motor clips or the bumper skirt.  The included wheels press-fit onto the shafts of the Micro Metal Gearmotors.  The 3pi+ chassis also has an integrated rear ball caster socket that the included plastic ball pops into.</p>
+<table class="side_by_side_pics">
+	<tr>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J11098.1200.jpg?b361f6ddfb0ccc3603487a5e7f1cc945" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11098&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11098.98x98.jpg?b361f6ddfb0ccc3603487a5e7f1cc945&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11098.600x480.jpg?b361f6ddfb0ccc3603487a5e7f1cc945&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11098.1200.jpg?b361f6ddfb0ccc3603487a5e7f1cc945&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11098" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11098.300.jpg?b361f6ddfb0ccc3603487a5e7f1cc945" /></a></td></tr><tr><th style="max-width: 300px"><p>3pi+ Chassis Kit, rear view with motors and motor clips installed in place of the outer skirt (motors not included).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J11055.1200.jpg?c544ddfeb324b377d4614b4a982d5dce" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11055&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, top view with motors installed and without outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11055.98x98.jpg?c544ddfeb324b377d4614b4a982d5dce&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11055.600x480.jpg?c544ddfeb324b377d4614b4a982d5dce&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11055.1200.jpg?c544ddfeb324b377d4614b4a982d5dce&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11055" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11055.300.jpg?c544ddfeb324b377d4614b4a982d5dce" /></a></td></tr><tr><th style="max-width: 300px"><p>3pi+ Chassis Kit, top view with motors installed and without outer skirt (motors not included).</p></th></tr></table></td>
+	</tr>
+	<tr>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J11046.1200.jpg?a346bc3da021040b638672b7cf92eef3" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11046&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11046.98x98.jpg?a346bc3da021040b638672b7cf92eef3&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11046.600x480.jpg?a346bc3da021040b638672b7cf92eef3&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11046.1200.jpg?a346bc3da021040b638672b7cf92eef3&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11046" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11046.300.jpg?a346bc3da021040b638672b7cf92eef3" /></a></td></tr><tr><th style="max-width: 300px"><p>3pi+ Chassis Kit, rear view, assembled with Micro Metal Gearmotors (motors not included).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J11048.1200.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11048&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, top view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11048.98x98.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11048.600x480.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11048.1200.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11048" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11048.300.jpg?bf70d1131a86b8b88b9f9fd0d6bd2343" /></a></td></tr><tr><th style="max-width: 300px"><p>3pi+ Chassis Kit, top view, assembled with Micro Metal Gearmotors (motors not included).</p></th></tr></table></td>
+	</tr>
+</table>
+<p>The following pictures show what the chassis looks like in profile with and without the bumper skirt:</p>
+<table class="side_by_side_pics">
+	<tr>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J11050.1200.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11050&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11050.98x98.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11050.600x480.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11050.1200.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11050" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11050.250.jpg?aace6d9b5feb30f9d99c07fa15d2a7c1" /></a></td></tr><tr><th style="max-width: 250px"><p>3pi+ Chassis Kit, front view, assembled with Micro Metal Gearmotors (motors not included).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J11051.1200.jpg?ed44ae19ba684dd36caabcc6f81cb245" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11051&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, side view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11051.98x98.jpg?ed44ae19ba684dd36caabcc6f81cb245&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11051.600x480.jpg?ed44ae19ba684dd36caabcc6f81cb245&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11051.1200.jpg?ed44ae19ba684dd36caabcc6f81cb245&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11051" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11051.250.jpg?ed44ae19ba684dd36caabcc6f81cb245" /></a></td></tr><tr><th style="max-width: 250px"><p>3pi+ Chassis Kit, side view, assembled with Micro Metal Gearmotors (motors not included).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J11052.1200.jpg?1d6069eb19a031b9f161d83a769ef95a" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11052&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view, assembled with Micro Metal Gearmotors (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11052.98x98.jpg?1d6069eb19a031b9f161d83a769ef95a&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11052.600x480.jpg?1d6069eb19a031b9f161d83a769ef95a&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11052.1200.jpg?1d6069eb19a031b9f161d83a769ef95a&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11052" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11052.250.jpg?1d6069eb19a031b9f161d83a769ef95a" /></a></td></tr><tr><th style="max-width: 250px"><p>3pi+ Chassis Kit, rear view, assembled with Micro Metal Gearmotors (motors not included).</p></th></tr></table></td>
+	</tr>
+	<tr>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J11056.1200.jpg?fa62c445c03ac3f93ae0ace269c8f9b4" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11056&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, front view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11056.98x98.jpg?fa62c445c03ac3f93ae0ace269c8f9b4&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11056.600x480.jpg?fa62c445c03ac3f93ae0ace269c8f9b4&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11056.1200.jpg?fa62c445c03ac3f93ae0ace269c8f9b4&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11056" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11056.250.jpg?fa62c445c03ac3f93ae0ace269c8f9b4" /></a></td></tr><tr><th style="max-width: 250px"><p>3pi+ Chassis Kit, front view with motors and motor clips installed in place of the outer skirt (motors not included).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J11057.1200.jpg?63d394820f8488ecb6b33c2b1c792d1e" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11057&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, side view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11057.98x98.jpg?63d394820f8488ecb6b33c2b1c792d1e&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11057.600x480.jpg?63d394820f8488ecb6b33c2b1c792d1e&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11057.1200.jpg?63d394820f8488ecb6b33c2b1c792d1e&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11057" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11057.250.jpg?63d394820f8488ecb6b33c2b1c792d1e" /></a></td></tr><tr><th style="max-width: 250px"><p>3pi+ Chassis Kit, side view with motors and motor clips installed in place of the outer skirt (motors not included).</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 250px"><a href="https://a.pololu-files.com/picture/0J11058.1200.jpg?57d2570e4510158bf4d38c8b5bd850b3" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J11058&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ Chassis Kit, rear view with motors and motor clips installed in place of the outer skirt (motors not included).\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J11058.98x98.jpg?57d2570e4510158bf4d38c8b5bd850b3&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J11058.600x480.jpg?57d2570e4510158bf4d38c8b5bd850b3&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J11058.1200.jpg?57d2570e4510158bf4d38c8b5bd850b3&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J11058" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J11058.250.jpg?57d2570e4510158bf4d38c8b5bd850b3" /></a></td></tr><tr><th style="max-width: 250px"><p>3pi+ Chassis Kit, rear view with motors and motor clips installed in place of the outer skirt (motors not included).</p></th></tr></table></td>
+	</tr>
+</table>
+<h2>3pi+ Robots</h2>
+<p>This chassis works with the <a href="/product/5006">3pi+ 2040 Control Board</a>  and <a href="/product/4973">3pi+ 32U4 OLED Control Board</a>, and you can add one along with a pair of Micro Metal Gearmotors to make your own 3pi+ 2040 Robot or 3pi+ 32U4 OLED Robot:</p>
+<table class="side_by_side_pics">
+	<tr>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 265px"><a href="https://a.pololu-files.com/picture/0J12000.1200.jpg?923b5076a5df04776b9255db5b4042de" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J12000&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ 2040 Control Board.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J12000.98x98.jpg?923b5076a5df04776b9255db5b4042de&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J12000.600x480.jpg?923b5076a5df04776b9255db5b4042de&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J12000.1200.jpg?923b5076a5df04776b9255db5b4042de&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J12000" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J12000.265h.jpg?923b5076a5df04776b9255db5b4042de" /></a></td></tr><tr><th style="max-width: 265px"><p>3pi+ 2040 Control Board.</p></th></tr></table></td>
+		<td><table class="picture_with_caption center"><tr><td style="max-width: 300px"><a href="https://a.pololu-files.com/picture/0J12003.1200.jpg?afe1131c6d71cc10bc34d0244f259d84" class="noscript-fallback"><img alt="" class="zoomable" data-gallery-pictures="[{&quot;id&quot;:&quot;0J12003&quot;,&quot;caption&quot;:&quot;\u003cp\u003e3pi+ 2040 Robot.\u003c/p\u003e&quot;,&quot;url_tiny&quot;:&quot;https://a.pololu-files.com/picture/0J12003.98x98.jpg?afe1131c6d71cc10bc34d0244f259d84&quot;,&quot;url_medium&quot;:&quot;https://a.pololu-files.com/picture/0J12003.600x480.jpg?afe1131c6d71cc10bc34d0244f259d84&quot;,&quot;url_full&quot;:&quot;https://a.pololu-files.com/picture/0J12003.1200.jpg?afe1131c6d71cc10bc34d0244f259d84&quot;,&quot;longest_side&quot;:1200}]" data-picture-id="0J12003" data-picture-longest_side="1200" src="https://a.pololu-files.com/picture/0J12003.300.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a></td></tr><tr><th style="max-width: 300px"><p>3pi+ 2040 Robot.</p></th></tr></table></td>
+	</tr>
+</table>
+<p>This chassis kit and control board are already included as part of the following 3pi+ 2040 and 3pi+ 32U4 assembled robots and kits:</p>
+<p><strong>3pi+ 2040 versions:</strong></p>
+<ul>
+	<li><a href="/product/5001">3pi+ 2040 Robot &#8211; Standard Edition (30:1 MP Motors), Assembled</a></li>
+	<li><a href="/product/5002">3pi+ 2040 Robot &#8211; Turtle Edition (75:1 LP Motors), Assembled</a></li>
+	<li><a href="/product/5000">3pi+ 2040 Robot &#8211; Hyper Edition (15:1 HPCB Motors), Assembled</a></li>
+	<li><a href="/product/5004">3pi+ 2040 Robot Kit with 30:1 MP Motors &lpar;Standard Edition Kit&rpar;</a></li>
+	<li><a href="/product/5005">3pi+ 2040 Robot Kit with 75:1 LP Motors &lpar;Turtle Edition Kit&rpar;</a></li>
+	<li><a href="/product/5003">3pi+ 2040 Robot Kit with 15:1 HPCB Motors &lpar;Hyper Edition Kit&rpar;</a></li>
+</ul>
+<p><strong>3pi+ 32U4 OLED versions:</strong></p>
+<ul>
+	<li><a href="/product/4975">3pi+ 32U4 OLED Robot &#8211; Standard Edition (30:1 MP Motors), Assembled</a></li>
+	<li><a href="/product/4976">3pi+ 32U4 OLED Robot &#8211; Turtle Edition (75:1 LP Motors), Assembled</a></li>
+	<li><a href="/product/4974">3pi+ 32U4 OLED Robot &#8211; Hyper Edition (15:1 HPCB Motors), Assembled</a></li>
+	<li><a href="/product/4978">3pi+ 32U4 OLED Robot Kit with 30:1 MP Motors &lpar;Standard Edition Kit&rpar;</a></li>
+	<li><a href="/product/4979">3pi+ 32U4 OLED Robot Kit with 75:1 LP Motors &lpar;Turtle Edition Kit&rpar;</a></li>
+	<li><a href="/product/4977">3pi+ 32U4 OLED Robot Kit with 15:1 HPCB Motors &lpar;Hyper Edition Kit&rpar;</a></li>
+</ul>
+<p><strong>Original 3pi+ 32U4 versions (with LCD):</strong></p>
+<ul>
+	<li><a href="/product/3737">3pi+ 32U4 Robot &#8211; Standard Edition (30:1 MP Motors), Assembled</a></li>
+	<li><a href="/product/3738">3pi+ 32U4 Robot &#8211; Turtle Edition (75:1 LP Motors), Assembled</a></li>
+	<li><a href="/product/3736">3pi+ 32U4 Robot &#8211; Hyper Edition (15:1 HPCB Motors), Assembled</a></li>
+	<li><a href="/product/3740">3pi+ 32U4 Robot Kit with 30:1 MP Motors &lpar;Standard Edition Kit&rpar;</a></li>
+	<li><a href="/product/3741">3pi+ 32U4 Robot Kit with 75:1 LP Motors &lpar;Turtle Edition Kit&rpar;</a></li>
+	<li><a href="/product/3739">3pi+ 32U4 Robot Kit with 15:1 HPCB Motors &lpar;Hyper Edition Kit&rpar;</a></li>
+</ul>
+
+
+</div>
+
+
+<div id="small_related_items"><div><h2>Related products</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/product/5006"><img alt="" src="https://a.pololu-files.com/picture/0J11998.50x40.jpg?9b5694020f94b6de8ad31bc1904f4653" /></a>
+</td>
+<td><a href="/product/5006">3pi+ 2040 Control Board</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/5004"><img alt="" src="https://a.pololu-files.com/picture/0J11996.50x40.jpg?461f129019958c8296658e854278c9b4" /></a>
+</td>
+<td><a href="/product/5004">3pi+ 2040 Robot Kit with 30:1 MP Motors (Standard Edition Kit)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/5001"><img alt="" src="https://a.pololu-files.com/picture/0J12003.50x40.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a>
+</td>
+<td><a href="/product/5001">3pi+ 2040 Robot - Standard Edition (30:1 MP Motors), Assembled</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4973"><img alt="" src="https://a.pololu-files.com/picture/0J11317.50x40.jpg?1395a07a5b72258a15cf453c2333fd7a" /></a>
+</td>
+<td><a href="/product/4973">3pi+ 32U4 OLED Control Board</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4978"><img alt="" src="https://a.pololu-files.com/picture/0J11342.50x40.jpg?34ac925a9d6e599ae92a722ff877e959" /></a>
+</td>
+<td><a href="/product/4978">3pi+ 32U4 OLED Robot Kit with 30:1 MP Motors (Standard Edition Kit)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4975"><img alt="" src="https://a.pololu-files.com/picture/0J11323.50x40.jpg?bf2f67dbe8c5a1035409af8b78b78f97" /></a>
+</td>
+<td><a href="/product/4975">3pi+ 32U4 OLED Robot - Standard Edition (30:1 MP Motors), Assembled</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1002"><img alt="" src="https://a.pololu-files.com/picture/0J3189.50x40.jpg?e639d70dc884fad2d2f85e548fabcd5f" /></a>
+</td>
+<td><a href="/product/1002">Rechargeable NiMH AAA Battery: 1.2 V, 900 mAh, 1 cell</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2378"><img alt="" src="https://a.pololu-files.com/picture/0J12478.50x40.jpg?567e81f6f9e0f794ac70fd41793e2f13" /></a>
+</td>
+<td><a href="/product/2378">30:1 Micro Metal Gearmotor MP 6V with Extended Motor Shaft</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2209"><img alt="" src="https://a.pololu-files.com/picture/0J12478.50x40.jpg?567e81f6f9e0f794ac70fd41793e2f13" /></a>
+</td>
+<td><a href="/product/2209">75:1 Micro Metal Gearmotor LP 6V with Extended Motor Shaft</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4787"><img alt="" src="https://a.pololu-files.com/picture/0J6830.50x40.jpg?3a4674227a0cec37acfd2d30f3f091b1" /></a>
+</td>
+<td><a href="/product/4787">15:1 Micro Metal Gearmotor HPCB 6V with Extended Motor Shaft</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1088"><img alt="" src="https://a.pololu-files.com/picture/0J10441.50x40.jpg?fcc74d4cbfe1a59b16edefdfa4397652" /></a>
+</td>
+<td><a href="/product/1088">Pololu Wheel 32×7mm Pair - White</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1087"><img alt="" src="https://a.pololu-files.com/picture/0J10440.50x40.jpg?44318cdc8b5116945880482c26aa817c" /></a>
+</td>
+<td><a href="/product/1087">Pololu Wheel 32×7mm Pair - Black</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/3407"><img alt="" src="https://a.pololu-files.com/picture/0J10185.50x40.jpg?127e91da5ec07aa3572d0ae5124ba428" /></a>
+</td>
+<td><a href="/product/3407">Silicone Tire Pair for 32×7mm Pololu Wheels</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/957"><img alt="" src="https://a.pololu-files.com/picture/0J9823.50x40.jpg?d3bbfa55080d7c0675461b3df63be60b" /></a>
+</td>
+<td><a href="/product/957">Replacement 3pi Ball Caster with 1/2″ Plastic Ball</a></td>
+</tr>
+</table>
+</div>
+</div><div><h2>Related categories</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/category/76/3pi-robots-and-accessories"><img alt="" src="https://a.pololu-files.com/picture/0J12003.50x40.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a>
+</td>
+<td><a href="/category/76/3pi-robots-and-accessories">3pi Robots and Accessories</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/26/chassis"><img alt="" src="https://a.pololu-files.com/picture/0J6602.50x40.jpg?9332d0e676b9fd777d6a84bf13df1100" /></a>
+</td>
+<td><a href="/category/26/chassis">Chassis</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/300/3pi-plus-2040-robot"><img alt="" src="https://a.pololu-files.com/picture/0J12003.50x40.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a>
+</td>
+<td><a href="/category/300/3pi-plus-2040-robot">3pi+ 2040 Robot</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/280/3pi-plus-32u4-oled-robot"><img alt="" src="https://a.pololu-files.com/picture/0J11323.50x40.jpg?bf2f67dbe8c5a1035409af8b78b78f97" /></a>
+</td>
+<td><a href="/category/280/3pi-plus-32u4-oled-robot">3pi+ 32U4 OLED Robot</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/60/micro-metal-gearmotors"><img alt="" src="https://a.pololu-files.com/picture/0J6410.50x40.jpg?7b215efad0f55f0963d9f951be03d3d1" /></a>
+</td>
+<td><a href="/category/60/micro-metal-gearmotors">Micro Metal Gearmotors</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/11/brushed-dc-motor-drivers"><img alt="" src="https://a.pololu-files.com/picture/0J5250.50x40.jpg?8243159a88f13b4a1b62b37b4868d19a" /></a>
+</td>
+<td><a href="/category/11/brushed-dc-motor-drivers">Brushed DC Motor Drivers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/7/sensors"><img alt="" src="https://a.pololu-files.com/picture/0J174.50x40.jpg?bb753ade644f27a1329563bf8475484f" /></a>
+</td>
+<td><a href="/category/7/sensors">Sensors</a></td>
+</tr>
+</table>
+</div>
+</div></div>
+<script>
+product_ui.update();
+</script>
+
+
+<!-- CONTENTS_END -->
+<div id='footer'>
+<p class='share'>
+<span class="image_text_link"><a href="/product/3725?print=1"><img alt="" src="https://a.pololu-files.com/assets/printer-448cebb2a5016700db2565421ada6e98f90fabe5885d8cd3cca1a3854748e146.png" /></a><a href="/product/3725?print=1">Print</a></span>
+<span class="image_text_link"><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725&amp;subject"><img alt="" src="https://a.pololu-files.com/assets/email-f2957b324fa09a7d81ed64679a6b9454647ad40514cd7b1ce501aefd946f5593.png" /></a><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725&amp;subject">Email a friend</a></span>
+<span class="image_text_link"><a href="/feeds"><img alt="" src="https://a.pololu-files.com/assets/feed-icon-12x12-ad0e7f1965647f9414a76a1f32fb46dc73c1b2d295201b0abb56f2b2cf88bfb2.png" /></a><a href="/feeds">Feeds</a></span>
+</p>
+<p class='links'>
+<a href="/">Home</a>
+|
+<a href="https://forum.pololu.com/">Forum</a>
+|
+<a href="/blog">Blog</a>
+|
+<a href="/support">Support</a>
+|
+<a href="/ordering">Ordering Information</a>
+|
+<a href="/list">Lists</a>
+|
+<a href="/distributors">Distributors</a>
+|
+<a href="/catalog/bigorderform">BIG Order Form</a>
+|
+<a href="/about">About</a>
+|
+<a href="/contact">Contact</a>
+</p>
+<p id='copyright'>&copy; 2001<a rel="nofollow" style="text-decoration: none; color: inherit;" href="/pot/0?from=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725">–</a>2026 Pololu Corporation</p>
+</div>
+</div>
+</div>
+<div id='right_col'>
+<div class='menu' data-my-quotes='1'></div>
+<script>quote.display_list()</script>
+<div class='menu' data-mini-cart='1'></div>
+<script>cart.display_mini_cart_content()</script>
+<div><h2>Related Products</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/product/5006"><img alt="" src="https://a.pololu-files.com/picture/0J11998.50x40.jpg?9b5694020f94b6de8ad31bc1904f4653" /></a>
+</td>
+<td><a href="/product/5006">3pi+ 2040 Control Board</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/5004"><img alt="" src="https://a.pololu-files.com/picture/0J11996.50x40.jpg?461f129019958c8296658e854278c9b4" /></a>
+</td>
+<td><a href="/product/5004">3pi+ 2040 Robot Kit with 30:1 MP Motors (Standard Edition Kit)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/5001"><img alt="" src="https://a.pololu-files.com/picture/0J12003.50x40.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a>
+</td>
+<td><a href="/product/5001">3pi+ 2040 Robot - Standard Edition (30:1 MP Motors), Assembled</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4973"><img alt="" src="https://a.pololu-files.com/picture/0J11317.50x40.jpg?1395a07a5b72258a15cf453c2333fd7a" /></a>
+</td>
+<td><a href="/product/4973">3pi+ 32U4 OLED Control Board</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4978"><img alt="" src="https://a.pololu-files.com/picture/0J11342.50x40.jpg?34ac925a9d6e599ae92a722ff877e959" /></a>
+</td>
+<td><a href="/product/4978">3pi+ 32U4 OLED Robot Kit with 30:1 MP Motors (Standard Edition Kit)</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4975"><img alt="" src="https://a.pololu-files.com/picture/0J11323.50x40.jpg?bf2f67dbe8c5a1035409af8b78b78f97" /></a>
+</td>
+<td><a href="/product/4975">3pi+ 32U4 OLED Robot - Standard Edition (30:1 MP Motors), Assembled</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1002"><img alt="" src="https://a.pololu-files.com/picture/0J3189.50x40.jpg?e639d70dc884fad2d2f85e548fabcd5f" /></a>
+</td>
+<td><a href="/product/1002">Rechargeable NiMH AAA Battery: 1.2 V, 900 mAh, 1 cell</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2378"><img alt="" src="https://a.pololu-files.com/picture/0J12478.50x40.jpg?567e81f6f9e0f794ac70fd41793e2f13" /></a>
+</td>
+<td><a href="/product/2378">30:1 Micro Metal Gearmotor MP 6V with Extended Motor Shaft</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/2209"><img alt="" src="https://a.pololu-files.com/picture/0J12478.50x40.jpg?567e81f6f9e0f794ac70fd41793e2f13" /></a>
+</td>
+<td><a href="/product/2209">75:1 Micro Metal Gearmotor LP 6V with Extended Motor Shaft</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/4787"><img alt="" src="https://a.pololu-files.com/picture/0J6830.50x40.jpg?3a4674227a0cec37acfd2d30f3f091b1" /></a>
+</td>
+<td><a href="/product/4787">15:1 Micro Metal Gearmotor HPCB 6V with Extended Motor Shaft</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1088"><img alt="" src="https://a.pololu-files.com/picture/0J10441.50x40.jpg?fcc74d4cbfe1a59b16edefdfa4397652" /></a>
+</td>
+<td><a href="/product/1088">Pololu Wheel 32×7mm Pair - White</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/1087"><img alt="" src="https://a.pololu-files.com/picture/0J10440.50x40.jpg?44318cdc8b5116945880482c26aa817c" /></a>
+</td>
+<td><a href="/product/1087">Pololu Wheel 32×7mm Pair - Black</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/3407"><img alt="" src="https://a.pololu-files.com/picture/0J10185.50x40.jpg?127e91da5ec07aa3572d0ae5124ba428" /></a>
+</td>
+<td><a href="/product/3407">Silicone Tire Pair for 32×7mm Pololu Wheels</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/product/957"><img alt="" src="https://a.pololu-files.com/picture/0J9823.50x40.jpg?d3bbfa55080d7c0675461b3df63be60b" /></a>
+</td>
+<td><a href="/product/957">Replacement 3pi Ball Caster with 1/2″ Plastic Ball</a></td>
+</tr>
+</table>
+</div>
+</div><div><h2>Related Categories</h2>
+<div>
+<table class='linkable_item_list'>
+<tr>
+<td class='img'>
+<a href="/category/76/3pi-robots-and-accessories"><img alt="" src="https://a.pololu-files.com/picture/0J12003.50x40.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a>
+</td>
+<td><a href="/category/76/3pi-robots-and-accessories">3pi Robots and Accessories</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/26/chassis"><img alt="" src="https://a.pololu-files.com/picture/0J6602.50x40.jpg?9332d0e676b9fd777d6a84bf13df1100" /></a>
+</td>
+<td><a href="/category/26/chassis">Chassis</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/300/3pi-plus-2040-robot"><img alt="" src="https://a.pololu-files.com/picture/0J12003.50x40.jpg?afe1131c6d71cc10bc34d0244f259d84" /></a>
+</td>
+<td><a href="/category/300/3pi-plus-2040-robot">3pi+ 2040 Robot</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/280/3pi-plus-32u4-oled-robot"><img alt="" src="https://a.pololu-files.com/picture/0J11323.50x40.jpg?bf2f67dbe8c5a1035409af8b78b78f97" /></a>
+</td>
+<td><a href="/category/280/3pi-plus-32u4-oled-robot">3pi+ 32U4 OLED Robot</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/60/micro-metal-gearmotors"><img alt="" src="https://a.pololu-files.com/picture/0J6410.50x40.jpg?7b215efad0f55f0963d9f951be03d3d1" /></a>
+</td>
+<td><a href="/category/60/micro-metal-gearmotors">Micro Metal Gearmotors</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/11/brushed-dc-motor-drivers"><img alt="" src="https://a.pololu-files.com/picture/0J5250.50x40.jpg?8243159a88f13b4a1b62b37b4868d19a" /></a>
+</td>
+<td><a href="/category/11/brushed-dc-motor-drivers">Brushed DC Motor Drivers</a></td>
+</tr>
+<tr>
+<td class='img'>
+<a href="/category/7/sensors"><img alt="" src="https://a.pololu-files.com/picture/0J174.50x40.jpg?bb753ade644f27a1329563bf8475484f" /></a>
+</td>
+<td><a href="/category/7/sensors">Sensors</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id='lightbox_holder'>
+<div id='lightbox_gray_screen'></div>
+<div id='lightbox'>
+<div id='lightbox_gallery'></div>
+<div id='lightbox_content'></div>
+<div id='lightbox_right'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+<div id='lightbox_left'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+<div id='lightbox_close'>
+<a href='#' title='Close'><i class="fa fa-times" aria-hidden="true"></i></a>
+</div>
+<div id='lightbox_full'>
+<a href='#' title='View image'><i class="fa fa-expand" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+
+<div id='header_small_top'>
+<!-- / this has to go first since it takes up 100% of the width and would block clicking on other parts -->
+<div id='header_center_right'>
+<span data-login-ui='login'>
+<a href="/account/login?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725">Log In</a>
+</span>
+<span data-login-ui='my_account'>
+<a title="My account" data-login-ui="my_account_link" href="/account"></a>
+</span>
+
+</div>
+<div id='header_small_left'>
+<a href="/"><img width="118" height="30" alt="Pololu Robotics &amp; Electronics" class="logo_pololu_only" src="https://a.pololu-files.com/assets/header_pololu_only-fff6349c8769e6b2e59624d6dceacac4422156c5ac8b8b23532f0e93678bb981.png" /></a>
+</div>
+<div id='header_small_right'>
+<a href="/cart"><img width="30" height="30" alt="Shopping cart" src="https://a.pololu-files.com/assets/cart-bf4bf66669c9b9288e6e972718067855ecdcdfc80622cfea29ac04b29478f873.png" /></a>
+</div>
+</div>
+<div id='header_small_bottom'>
+<div id='header_small_right'>
+(702) 262-6648<br/>
+<a href="/ordering">Same-day shipping, worldwide</a>
+</div>
+<div id='header_small_left'>
+<a id="menu_button" onclick="return false;" href="/catalog/menu"><img width="30" height="30" alt="Menu" src="https://a.pololu-files.com/assets/menu-2023bba099d8fd2a25d8e1803c5bdf0aa0a024d9d585000ff9aec2c8a436b29a.png" /></a>
+</div>
+</div>
+<div id='header_small_menu'>
+<div class='header_small_menu_columns'>
+<a href="/catalog/menu">Shop</a>
+<a href="/blog">Blog</a>
+<a href="https://forum.pololu.com/">Forum</a>
+<a href="/support">Support</a>
+</div>
+<!-- / specify local variable id to set an id for the form, mainly for use with testing -->
+<form action='/search' id='header_small_search'>
+<div class='search'><input autocomplete='off' class='search_input mini_search_input' data-autocomplete-search='true' id='header_small_search_input' name='query' placeholder='Search' type='text'><input alt='' class='search_button' src='https://a.pololu-files.com/assets/magglass-d28c6b7b9d1f35858a702b71e13b678bfdee962d795c7ad2426ed9b19ccac5e8.png' type='image' value='go'>
+</div>
+</form>
+
+<a title="My account" href="/account">My account</a>
+<a data-feedback="true" href="/feedback/new?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725">Comments or questions?</a>
+<a href="/about">About Pololu</a>
+<a href="/contact">Contact</a>
+<a href="/ordering">Ordering information</a>
+<a href="/distributors">Distributors</a>
+</div>
+<div id='gray_screen'></div>
+<script>
+menuInit();
+</script>
+
+<div id='header_holder'>
+<table id='header'>
+<tr id='header_top'>
+<td id='header_logo' rowspan='2'>
+<a href="/"><img width="219" height="69" alt="Pololu Robotics and Electronics" class="logo" style="max-width: 230px;" src="https://a.pololu-files.com/assets/header_pololu_no_padding-e37eb899d2ec2ded9153a53ad9e0e6e12861f762e2c3bafb4ca40e79a85d149e.png" /></a>
+</td>
+<td colspan='16' id='header_address'>
+<div id='header_account_links'>
+<span data-login-ui='login'>
+<a href="/account/login?account%5Burl%5D=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725">Log In</a>
+</span>
+<span data-login-ui='my_account'>
+<a title="My account" data-login-ui="my_account_link" href="/account"></a>
+|
+<a href="/account">My Account</a>
+|
+</span>
+<div data-login-ui='logout'>
+<form data-login-ui="logout" action="https://www.pololu.com/account/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="session_id" value="**SESSION_ID_STUB**" /><button class="btn-link" name="log-out-button">Log Out</button></form>
+</div>
+
+|
+<a href="/cart">Shopping Cart <img width="16" height="16" alt="" src="https://a.pololu-files.com/assets/cart-bf4bf66669c9b9288e6e972718067855ecdcdfc80622cfea29ac04b29478f873.png" /></a>
+<script>dynamic_user_login.init()</script>
+</div>
+<p class='phone_number'>
+US toll free: 1-877-7-POLOLU ~
+(702) 262-6648<br/>
+<a href="/ordering">Same-day shipping, worldwide</a>
+</p>
+</td>
+</tr>
+<tr id='header_links'>
+<th class='selected'>
+<a href="/">Catalog</a>
+</th>
+<td>&nbsp;</td>
+<th>
+<a href="https://forum.pololu.com/">Forum</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/blog">Blog</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/support">Support</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/ordering">Ordering</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/distributors">Distributors</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/about">About</a>
+</th>
+<td>&nbsp;</td>
+<th class=''>
+<a href="/contact">Contact</a>
+</th>
+<td class='last'></td>
+</tr>
+</table>
+</div>
+<div id='left_col'>
+<div class='menu' id='menu_search'>
+<div>
+<!-- / specify local variable id to set an id for the form, mainly for use with testing -->
+<form action='/search' id='sidebar_search'>
+<div class='search'><input autocomplete='off' class='search_input mini_search_input' data-autocomplete-search='true' id='sidebar_search_input' name='query' placeholder='Search' type='text'><input alt='' class='search_button' src='https://a.pololu-files.com/assets/magglass-d28c6b7b9d1f35858a702b71e13b678bfdee962d795c7ad2426ed9b19ccac5e8.png' type='image' value='go'>
+</div>
+</form>
+
+</div>
+</div>
+<div class='menu'>
+<h2><a data-feedback="true" href="">Feedback</a></h2>
+<div>
+<a class="menu_visible_link" data-feedback="true" href="">Comments or questions?</a>
+</div>
+</div>
+<div class='menu'>
+<h2><a href="/category/31/services">Services</a></h2>
+<div>
+<ul>
+<li>
+<a href="/product/749">Custom Laser Cutting</a>
+</li>
+<li>
+<a href="/product/446">SMT Stencils</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='menu'>
+<h2><a href="/">Products</a></h2>
+<div>
+<!-- sidebar_categories --><h3><a href="/category/42/new-products">New Products</a></h3>
+<h3><span class="specials_category"><a href="/specials">Specials!</a></span></h3>
+<hr />
+<h3><a href="/category/2/robot-kits">Robots</a></h3>
+<ul>
+	<li><a href="/category/76/3pi-robots-and-accessories">3pi</a></li>
+	<li><a href="/category/210/balboa-robot-and-accessories">Balboa</a></li>
+	<li><a href="/category/327/collaborative-robots">Cobot</a></li>
+	<li><a href="/category/202/romi-chassis-and-accessories">Romi</a></li>
+	<li><a href="/category/129/zumo-robots-and-accessories">Zumo</a></li>
+	<li><a href="/category/3/robot-kits-with-soldering">Kits, Soldering</a></li>
+	<li><a href="/category/4/robot-kits-without-soldering">Kits, No Soldering</a></li>
+</ul>
+<h3><a href="/category/6/electronics">Electronics</a></h3>
+<ul>
+	<li><a href="/category/125/arduino-compatible">Arduino</a></li>
+	<li><a href="/category/39/cables-and-wire">Cables and Wires</a></li>
+	<li><a href="/category/13/computer-interface">Computer Interface</a></li>
+	<li><a href="/category/19/connectors">Connectors</a></li>
+	<li><a href="/category/64/development-boards-programmable-controllers">Development Boards</a></li>
+	<li><a href="/category/334/isolation">Isolation</a></li>
+	<li><a href="/category/20/leds">LEDs</a></li>
+	<li><a href="/category/9/motion-control-modules">Motor Control</a></li>
+	<li><a href="/category/321/power">Power</a></li>
+	<li><a href="/category/14/electronics-prototyping">Prototyping</a></li>
+	<li><a href="/category/150/raspberry-pi">Raspberry Pi</a></li>
+	<li><a href="/category/135/relay-modules">Relays</a></li>
+	<li><a href="/category/7/sensors">Sensors</a></li>
+	<li><a href="/category/102/maestro-usb-servo-controllers">Servo Control</a></li>
+	<li><a href="/category/136/voltage-regulators">Voltage Regulators</a></li>
+</ul>
+<h3><a href="/category/21/mechanical-components">Mechanical</a></h3>
+<ul>
+	<li><a href="/category/231/ball-casters">Ball Casters</a></li>
+	<li><a href="/category/230/brackets">Brackets</a></li>
+	<li><a href="/category/26/chassis">Chassis</a></li>
+	<li><a href="/category/25/hardware">Hardware</a></li>
+	<li><a href="/category/127/linear-actuators">Linear Actuators</a></li>
+	<li><a href="/category/22/motors-and-gearboxes">Motors</a></li>
+	<li><a href="/category/179/motor-shaft-adapters">Motor Shaft Adapters</a></li>
+	<li><a href="/category/205/servos">Servos</a></li>
+	<li><a href="/category/87/stepper-motors">Stepper Motors</a></li>
+	<li><a href="/category/61/tamiya-products">Tamiya Products</a></li>
+	<li><a href="/category/5/tools">Tools</a></li>
+	<li><a href="/category/232/tracks">Tracks</a></li>
+	<li><a href="/category/234/wheels">Wheels</a></li>
+</ul>
+<h3><a href="/category/109/shirts">Shirts</a></h3>
+<ul>
+	<li><a href="/category/237/pololu-balboa-t-shirts">Balboa T-Shirts</a></li>
+	<li><a href="/category/194/pololu-zumo-t-shirts">Zumo T-Shirts</a></li>
+	<li><a href="/category/193/pololu-circuit-logo-t-shirts">Logo T-Shirts</a></li>
+</ul>
+</div>
+</div>
+
+<div class='menu'>
+<h2>Community</h2>
+<div>
+<ul>
+<li>
+<a data-lightbox-link="true" data-lightbox-height="34rem" data-lightbox-width="36rem" href="/account/communication-preferences">Mailing list</a>
+</li>
+<li>
+<a href="/blog">Pololu Blog</a>
+</li>
+<li>
+<a href="/blog/engage-your-brain">Engage Your Brain</a>
+</li>
+<li>
+<a href="/blog/community-projects">Community Projects</a>
+</li>
+<li>
+<span class="image_text_link"><a href="/feeds"><img alt="" src="https://a.pololu-files.com/assets/feed-icon-12x12-ad0e7f1965647f9414a76a1f32fb46dc73c1b2d295201b0abb56f2b2cf88bfb2.png" /></a><a href="/feeds">Feeds</a></span>
+</li>
+<li>
+<span class="image_text_link"><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725&amp;subject"><img alt="" src="https://a.pololu-files.com/assets/email-f2957b324fa09a7d81ed64679a6b9454647ad40514cd7b1ce501aefd946f5593.png" /></a><a href="mailto:?body=https%3A%2F%2Fwww.pololu.com%2Fproduct%2F3725&amp;subject">Email a friend</a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id='mathjax'></div>
+</body>
+</html>

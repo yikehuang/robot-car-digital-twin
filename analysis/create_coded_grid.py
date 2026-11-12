@@ -70,8 +70,6 @@ def main():
     p=source[0];p.draw_circle(fitz.Point(110*mm,48.5*mm),5*mm,color=(.15,.65,.2),width=2)
     p.draw_line(fitz.Point(110*mm,48.5*mm),fitz.Point(130*mm,48.5*mm),color=(.15,.65,.2),width=2)
     p.get_pixmap(matrix=fitz.Matrix(.8,.8),alpha=False).save(OUT/'start_reference_NOT_for_print.png')
-    geometry=dict(confirmed=False,provenance='User approximate span 60 mm and axle-to-middle-sensor 30 mm; intermediate pitch and alignment not measured.',sensor_offsets_forward_left_mm=[[30,30],[30,15],[30,0],[30,-15],[30,-30]],wheel_radius_mm=16.1,wheel_separation_mm=83.6,counts_per_revolution=358.3,optical_blur_mm=1.0)
-    (ROOT/'sensor_map/geometry.example.json').write_text(json.dumps(geometry,indent=2),encoding='utf-8')
     print(json.dumps(dict(seed=seed,pattern_sha256=data['pattern_sha256'],black_cells=int(a.sum()),unique_oriented_5x5_patches=24*36*4)))
 
 if __name__=='__main__':main()

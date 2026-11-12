@@ -1,0 +1,15 @@
+{
+  "status": "partial user measurements; insufficient to reconstruct five coordinates",
+  "units": "mm",
+  "axle_midpoint_to_dn3_forward_approx": 30,
+  "dn1_dn2_distance_approx": 10,
+  "dn4_dn5_distance_approx": 10,
+  "dn1_dn5_reported_same_fore_aft_level": true,
+  "dn2_dn4_reported_same_fore_aft_level": true,
+  "dn3_reported_slightly_forward": true,
+  "dn2_dn3_reported_difference_less_than": 5,
+  "dn2_dn3_difference_axis": "unclear: lateral separation, forward stagger or centre distance",
+  "previous_span_approx_60_requires_recheck": true,
+  "previous_equal_spacing_15_is_not_a_measurement": true,
+  "active_geometry_example_is_not_updated_from_these_incomplete_constraints": true
+}

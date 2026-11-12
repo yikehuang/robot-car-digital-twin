@@ -1,0 +1,14 @@
+{
+  "source": "https://www.pololu.com/file/0J1792/3pi-plus-32u4-control-board-dimensions.pdf",
+  "page": 5,
+  "board_revision": "3pi03a and 3pi03b both visually checked: same five line-sensor centre layout",
+  "oled_source": "https://www.pololu.com/file/0J1825/3pi-plus-32u4-oled-control-board-dimensions.pdf",
+  "course_source": "https://semtm0043-42.github.io/getting-started.html",
+  "physical_board_revision": "not directly inspected; course confirms 3pi+ 32U4 family only",
+  "units": "mm",
+  "lateral_offsets_left_to_right": [30, 10, 0, -10, -30],
+  "forward_offsets_relative_to_middle_sensor": [-13.5, -1.5, 0, -1.5, -13.5],
+  "derivation": "drawing forward coordinates 17.2,29.2,30.7; lateral dimensions 10 and 20",
+  "axle_to_middle_sensor": "not established here; user's approximate 30 mm is separate",
+  "active_configuration_changed": false
+}

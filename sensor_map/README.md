@@ -38,7 +38,7 @@ Install NumPy and standard Python/Tkinter. Flash the optional GRID firmware with
 - 相同黑白组合可以出现在不同位置。图案通过全部 3456 个理想 5×5 方块的四向旋转唯一性检查；这**不等于**五个稀疏探头的一帧数据唯一，更不保证任意角度全局定位。当前不支持绑架恢复或未知起点全局搜索。
 - 绿色线是 **sensor-fused estimate**，不是无模型直接测量，更不是外部 ground truth。编码器仍用于帧间传播。缺少新时间戳、地图信息不足、越界、分布过宽或明显不匹配时不显示有效位置，并断开轨迹，避免伪造连续线路。
 - 速度和转速来自至少 300 ms 的稳定融合位置历史；数据不够时显示 pending。色差本身不是速度。滤波分布宽度只反映模型内不确定性，不是实际精度保证。
-- `geometry.example.json` 使用用户估计：整排跨度约 60 mm、轮轴中点到中间探头约 30 mm。中间探头等间距（15 mm）与有效光斑 1 mm 为待验证近似；名义轮半径 16.1 mm、轮距 83.6 mm、358.3 counts/revolution 也要按各车验证。**尚未确认 DN1..DN5 对实际左右探头的逐一对应**，正式定位前逐个遮挡核对。不要把车头边缘当轮轴或探头中心。
+- `geometry.example.json` 使用用户估计：整排跨度约 60 mm、轮轴中点到中间探头约 30 mm。已按官方图纸修正为非等间距、前后错开的布局，详见 ../knowledge-base/official-pololu-20261112/README.md；有效光斑 1 mm 仍为待验证近似；官方名义轮半径为 16 mm；轮距 83.6 mm、358.3 counts/revolution 为尚未核实的历史程序值，需按各车验证。**尚未确认 DN1..DN5 对实际左右探头的逐一对应**，正式定位前逐个遮挡核对。不要把车头边缘当轮轴或探头中心。
 - 历史个人实验 15 mm 探头高度不自动等于当前落地高度。高度、打印反射率、光斑、灯光、轮子打滑和几何误差都会影响定位。转角处外侧探头可能短暂离开有效图案，软件会排除越界读数。
 
 Cells are inferred from sequential reflectance likelihood and encoder propagation near a known start. No PWM-derived pose or square stage is fed to the localiser. A unique ideal 5×5 patch does not imply a unique five-sensor observation. Sparse sampling, aliasing, surface changes and incorrect geometry can produce plausible but wrong estimates. Green traces are model-dependent sensor-fused estimates, not external ground truth. No accepted position is drawn for rejected observations; velocities require stable temporal matches. Geometry, channel ordering and optical footprint require physical checks before accuracy claims.
