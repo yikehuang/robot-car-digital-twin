@@ -115,7 +115,7 @@ See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) for further thanks and related ma
 
 ## 来源与许可证 / Provenance and license
 
-本项目包含课程接口、组员提供的基准程序，以及 Zeqi Dong 后续完成的本地集成、模型与控制修改。详见 [SOURCES_AND_CHANGES.md](SOURCES_AND_CHANGES.md)，并保留课程源码的 [GPL-3.0 许可证](LICENSE)。Processing、Java、ESP32 等第三方运行环境需单独安装。
+本项目包含课程接口、组员提供的基准程序，以及本人后续完成的本地集成、模型与控制修改。详见 [SOURCES_AND_CHANGES.md](SOURCES_AND_CHANGES.md)，并保留课程源码的 [GPL-3.0 许可证](LICENSE)。Processing、Java、ESP32 等第三方运行环境需单独安装。
 
 This snapshot combines course interfaces, a teammate-supplied benchmark and Zeqi Dong's subsequent local integration/model/control work. See [SOURCES_AND_CHANGES.md](SOURCES_AND_CHANGES.md) and the preserved [course GPL-3.0 license](LICENSE). Third-party Processing, Java and ESP32 runtimes are installed separately.
 
